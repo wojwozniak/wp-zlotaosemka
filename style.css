@@ -14,36 +14,6 @@ Author URI: https://github.com/wojwozniak
 
 :root {
     /* Theme's colour scheme */
-    --brightgreen: rgb(166, 206, 57);
-    --basicgreen: rgb(134, 163, 21);
-    --darkgreen: rgb(74, 123, 38);
-    --brightpurple: rgb(123, 90, 162);
-    --basicpurple: rgb(92, 56, 150);
-    --darkpurple: rgb(54, 33, 94);
-    --brightorange: rgb(253, 187, 99);
-    --basicorange: rgb(245, 130, 32);
-    --darkorange: rgb(229, 102, 38);
-    --brightred: rgb(241, 90, 56);
-    --basicred: rgb(206, 24, 30);
-    --darkred: rgb(177, 17, 22);
-    --brightnavy: rgb(109, 138, 198);
-    --basicnavy: rgb(8, 76, 161);
-    --darknavy: rgb(32, 53, 129);
-    --brightyellow: rgb(249, 202, 79);
-    --basicyellow: rgb(239, 172, 31);
-    --darkyellow: rgb(229, 150, 37);
-    --brightblue: rgb(129, 208, 237);
-    --basicblue: rgb(5, 182, 230);
-    --darkblue: rgb(0, 134, 170);
-    --brightbrown: rgb(194, 125, 67);
-    --basicbrown: rgb(157, 85, 40);
-    --darkbrown: rgb(87, 49, 25);
-    --brightgray: rgb(194, 201, 208);
-    --basicgray: rgb(151, 162, 171);
-    --darkgray: rgb(101, 118, 129);
-    --brightpurple: rgb(166, 71, 128);
-    --basicpurple: rgb(133, 12, 112);
-    --darkpurple: rgb(95, 0, 84);
     --brightblack: #36454f;
     --white: rgb(255, 255, 255);
     --whitesmoke: #f0f0f0;
@@ -74,11 +44,9 @@ body {
   flex-direction: column;
   color: var(--brightblack);
   font-family: 'Roboto', sans-serif;
-}
+  min-height: 100%;
+  align-items: center;
 
-#lol {
-    height: 100%;
-    width: 100%;
 }
 
 a.button {
@@ -132,63 +100,20 @@ a.button {
   box-shadow: none;
 }
 
-
-/* Headers */
-
-.h1 .h2 .h3 .h4 .text {
-  color: var(--black);
-}
-
-.h1 {
-  font-size: 48px;
-  font-weight: 700;
-}
-
-.h2 {
-  font-size: 36px;
-  font-weight: 700;
-}
-
-.h3 {
-  font-size: 30px;
-  font-weight: 500;
-}
-
-.h4 {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.text {
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.smalltext {
-  font-size: 14px;
-  font-weight: 400px;
-}
-
 /* ### Main navigation, header ### */
 
 /* navbar */
 
-nav {
-  background-color: transparent;
-  z-index: 1;
-}
-
-/* fixed nav */
-
-.fixed-nav {
+#nav {
+  background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--white);
+  z-index: 1;
 }
 
-.nav-header {
+#nav-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -197,20 +122,9 @@ nav {
 /* logo */
 
 .logo {
-  height: 120px;
+  height: 100px;
   width: auto;
-}
-
-.invertcolor {
-  filter: invert(100%);
-}
-
-.white a {
-  color: var(--white) !important;
-}
-
-.white a:hover {
-  color: var(--brightgray) !important;
+  padding: 10px;
 }
 
 /* Small screen links */
@@ -230,8 +144,8 @@ nav {
 }
 
 .links a {
-  background: var(--white);
-  color: var(--black);
+  background: var(--black);
+  color: var(--white);
   font-size: 15px;
   text-transform: uppercase;
   display: block;
@@ -244,13 +158,9 @@ nav {
 
 /* Full screen navbar and links */
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 400px) {
 
-  nav {
-    background: transparent;
-  }
-
-  .nav-center {
+  #nav-center {
     width: 95vw;
     margin: 0 auto;
     display: flex;
@@ -258,7 +168,7 @@ nav {
     justify-content: space-between;
   }
 
-  .nav-header {
+  #nav-header {
     padding: 0;
   }
 
@@ -290,22 +200,33 @@ nav {
   .links li {
     border: none;
   }
- 
 
-  [aria-current]:not([aria-current="false"]) {
-    font-weight: bold;
-    color: var(--gold);
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
   }
 }
-
-
 
 /* Menu toggle button */
 
 .nav-toggle {
   font-size: 1.5rem;
   padding: 1rem;
-  color: var(--black);
+  color: var(--white);
   margin-right: 2.5vw;
   background: transparent;
   border-color: transparent;
@@ -314,7 +235,7 @@ nav {
 }
 
 .nav-toggle:hover {
-  color: var(--brightblack);
+  color: var(--gold);
   transform: rotate(90deg);
   transition: 0.4s;
 }
@@ -328,7 +249,6 @@ nav {
   outline: 0;
   border: none;
 }
-
 
 /* Top link button */
 
@@ -371,3 +291,10 @@ nav {
   }
 }
 
+/* ### INDEX ### */
+
+.wrapper {
+  min-height: 100%;
+  width: 95%;
+  margin-top: 100px;
+}

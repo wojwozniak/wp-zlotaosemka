@@ -2,7 +2,9 @@
 	get_header();
 ?>
 
-<div id ="lol"></div>
+<div class = "wrapper">
+	<h1>test</h1>
+</div>
 
 <?php
 	get_footer();
