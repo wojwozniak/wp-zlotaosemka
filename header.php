@@ -15,33 +15,29 @@
 </head> 
 
 <body id="home">
-	<nav id="nav">
-		<div id="nav-center">
-			<div id="nav-header">
-				<?php
-					if(function_exists('the_custom_logo')){
-						$custom_logo_id = get_theme_mod('custom_logo');
-						$logo = wp_get_attachment_image_src($custom_logo_id);
-					}
-				?>
-				<a href="<?php echo get_home_url(); ?>">
-				<img id="logo" src=<?php echo $logo[0] ?> alt="logo" class="logo"/> </a>
-				<button class="nav-toggle"><i class="fas fa-bars"></i></button>
-			</div>
-			<div class="links-container">		
-				<?php
-					wp_nav_menu(
-						array(
-							'menu' => 'primary',
-							'container' => '',
-							'theme_location' => 'primary',
-							'items_wrap' => '<ul id="ul" class="links">%3$s</ul>',
-							'container_aria_label' => 'footer-menu'
+	<nav>
+		<?php
+			if(function_exists('the_custom_logo')){
+				$custom_logo_id = get_theme_mod('custom_logo');
+				$logo = wp_get_attachment_image_src($custom_logo_id);
+			}
+		?>
+		<a id="homelink" href="<?php echo get_home_url(); ?>">
+			<img id="logo" src=<?php echo $logo[0] ?> alt="logo"/>
+		</a>	
+		<div id="main-nav">
+			<?php
+				wp_nav_menu(
+					array(
+						'menu' => 'primary',
+						'container' => '',
+						'theme_location' => 'primary',
+						'items_wrap' => '<ul id="menu-navbar" class="menu">%3$s</ul>'
 
-						)
 					)
-				?>
-			</div>
+				)
+			?>
+			<a class="toggle-nav" href=“#"><i class="fas fa-bars"></i></a>
 		</div>
 	</nav>
 	<a class="scroll-link top-link" href="#home">
