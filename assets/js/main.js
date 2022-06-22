@@ -1,5 +1,12 @@
 
+const toggleBtn = document.querySelector(".toggle-nav");
+const menu = document.getElementById("menu-navbar");
 
+toggleBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  menu.classList.toggle("active");
+  toggleBtn.classList.toggle("toggle-active");
+});
 
 
 // ********** Top link button  ************

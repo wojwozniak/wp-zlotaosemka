@@ -109,7 +109,7 @@ a.button {
   width: auto;
   left: 20px;
   position: relative;
-  margin-right: 20px;
+  margin: 10px 20px 10px 0px;
 }
 
 /* navigation */
@@ -131,7 +131,7 @@ nav {
 }
 
 #menu-navbar {
-  width: 90%;
+  width: 100%;
   list-style-type: none;
   display: flex;
   justify-content: center;
@@ -148,6 +148,12 @@ nav {
 
 #main-nav ul li:hover > ul {
   display: block;
+  animation: fadein 0.2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 #main-nav ul li:hover {
@@ -195,6 +201,7 @@ nav {
 
 .sub-menu li:hover {
   border: 1px solid gold;
+  border-radius: 10px !important;
 }
 
 .sub-menu li:hover > a {
@@ -205,52 +212,56 @@ nav {
 
 .toggle-nav {
   position: absolute;
-  top: 25px;
-  right: 20px;
+  top: 38px;
+  right: 22px;
   font-size: 25px;
   display: none;
-} 
+  color: white;
+  transition: 0.4s;
+}
 
-@media screen and ( max-width: 550px) {
-  a.toggle-nav {
-    margin: 0 0 0.5em 0.5em;
-    display: inline-block !important;
-    color: #fff;
-    transition: color linear 0.15s;
-  }
-   
-  a.toggle-nav:hover, a.toggle-nav:active {
-    text-decoration: none;
-    color: #fff;
-  } 
-  
-  .menu-header {
-    display: inline-block;
-    position: relative;
-    margin: 0;
-    width: 100%;
-  }
-   
-  #access .menu-header ul {
-    display: none;
-    position: absolute;
-    top: 80%;
-    right: 0px;
-    min-width: 200px;
-    background-color: #7B3D84;
-    font-size: 1.2em;
-  }
-   
-  #access .menu-header li {
+.toggle-nav:hover {
+  color: gold;
+  cursor: pointer;
+}
+
+.toggle-active {
+  transform: rotate(90deg);
+}
+
+@media screen and ( max-width: 750px) {
+  .toggle-nav {
     display: block;
-    float: none;
-    padding-right: 2%;
-    text-align: right;
   }
-  #access ul li:hover > ul {
+
+  nav {
+    position: absolute;
+  }
+
+  #menu-navbar {
     display: none;
   }
-        
+
+  .active {
+    display: flex !important;
+    padding: 0px;
+    position: relative;
+    top: 100px;
+    left: -111px;
+    width: 100vw !important;
+    flex-shrink: 0;
+    height: fit-content;
+    background-color:rgba(0, 0, 0, 0.2);
+  }
+
+  .active li {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .active li:hover {
+    border-radius: 0px !important;
+  }
 }
 
 /* Top link button */

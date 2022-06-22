@@ -37,8 +37,8 @@
 					)
 				)
 			?>
-			<a class="toggle-nav" href=“#"><i class="fas fa-bars"></i></a>
 		</div>
+		<btn class="toggle-nav" href=""><i class="fas fa-bars"></i></btn>
 	</nav>
 	<a class="scroll-link top-link" href="#home">
     	<i class="fas fa-arrow-up"></i>
