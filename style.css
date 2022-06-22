@@ -180,7 +180,7 @@ nav {
   display: none;
 }
 
-@media screen and (min-width: 992px) {
+@media only screen and not (hover: none) {
   #main-nav ul li:hover > ul {
     display: block;
     animation: fadein 0.2s;
