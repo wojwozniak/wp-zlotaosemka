@@ -359,5 +359,11 @@ nav {
 .wrapper {
   min-height: 100%;
   width: 95%;
-  margin-top: 100px;
+  margin-top: 116px;
+}
+
+.post-wrapper {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 10px;
 }
