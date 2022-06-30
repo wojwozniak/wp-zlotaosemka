@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*
 Theme Name: Złota Ósemka
@@ -28,23 +28,46 @@ Author URI: https://github.com/wojwozniak
 }
 
 html,body {
-  min-height: 100%;
+  min-height: 100vh;
   width: 100vw;
   overflow: auto;
 }
 
 body {
   display: flex;
-  background-image: url("./assets/images/background.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center; 
+  background-color: whitesmoke;
   flex-direction: column;
   color: var(--brightblack);
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Exo', sans-serif;
+  font-weight: 300;
   min-height: 800px;
   align-items: center;
+}
 
+#bg {
+  background-image: url("./assets/images/background.jpg");
+  background-position: center;
+  background-size: cover !important;
+  position: absolute;
+  height: 90vh;
+  z-index: -1;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#bg:before, #bg:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-color: black;
+  box-sizing: border-box;
 }
 
 a.button {
@@ -105,10 +128,11 @@ li {
 }
 
 li a {
-  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
+  width: auto;
+  text-align: center;
 }
 
 /* ### Main navigation, header ### */
@@ -116,7 +140,7 @@ li a {
 /* logo */
 
 #logo {
-  height: 100px;
+  height: 70px;
   width: auto;
   margin: 0px;
 }
@@ -134,19 +158,25 @@ nav {
   width: 100%;
   display: flex;
   flex-direction: row;
-  background-color: rgba(0, 0, 0, 0.2);
-  font-weight: bold;
-  font-size: 18px;
-  height: 116px;
-  position: absolute;
+  background-color: rgba(0, 0, 0, 0.35);
+  font-size: 12px;
+  font-weight: 400;
+  height: 86px;
+  position: fixed;
+  text-transform: uppercase;
+  z-index: 1000;
+  transition-duration: 0.4s;
+}
+
+.fixed {
+  background-color: rgba(0,0,0,0.8);
 }
 
 #main-nav {
-  width: 85%;
+  width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 30px;
+  align-items: flex-end;
   flex-wrap: wrap;
 }
 
@@ -154,10 +184,13 @@ nav {
   margin-top: 8px;
   margin-bottom: 8px;
   width: 100%;
-  height: 108px;
+  height: 78px;
   list-style-type: none;
   display: flex;
-  justify-content: space-evenly;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 #menu-navbar li {
@@ -195,8 +228,14 @@ nav {
 
 #main-nav ul li:hover {
   background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px 10px 0px 0px;
+  transition-duration: 0.2s;
+  border-radius: 10px 10px 10px 10px;
 }
+
+#main-nav ul .menu-item-has-children:hover {
+  border-radius: 10px 10px 0px 0px !important;
+}
+
 
 #main-nav ul li:hover > a {
   color: gold !important;
@@ -205,7 +244,7 @@ nav {
 #main-nav ul ul {
   display: none;
   position: absolute;
-  top: 108px;
+  top: 78px;
   left: 0;
   z-index: 10;
   min-width: 180px;
@@ -237,6 +276,10 @@ nav {
   justify-content: left;
 }
 
+.sub-menu li a {
+  text-align: left !important;
+}
+
 .sub-menu li:hover {
   border: 1px solid gold;
   border-radius: 10px !important;
@@ -250,7 +293,7 @@ nav {
 
 .toggle-nav {
   position: absolute;
-  top: 38px;
+  top: 25px;
   right: 22px;
   font-size: 25px;
   display: none;
@@ -267,7 +310,11 @@ nav {
   transform: rotate(90deg);
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 770px) {
+  nav {
+    background-color: rgba(0,0,0,0.8);
+  }
+
   .toggle-nav {
     display: block;
   }
@@ -281,8 +328,8 @@ nav {
     flex-direction: column;
     height: fit-content !important;
     padding: 0px;
-    left: calc(100vw - 328px);
-    top: 108px;
+    left: calc(100vw - 293px);
+    top: 78px;
     position: fixed;
     width: 200px !important;
     flex-shrink: 0;
@@ -300,7 +347,7 @@ nav {
 
   .sub-menu {
     border-radius: 10px 0px 0px 10px;
-    transform: translate(-240px, -108px);
+    transform: translate(-240px, -78px);
   }
 
   .sub-menu li {
@@ -313,57 +360,30 @@ nav {
   display: block !important;
 }
 
-/* Top link button */
-
-.top-link {
-  font-size: 1.25rem;
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
-  background: var(--brightgray);
-  width: 2rem;
-  height: 2rem;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  color: var(--white);
-  animation: bounce 2s ease-in-out infinite;
-  visibility: hidden;
-  z-index: -100;
-}
-
-.top-link:hover {
-  color: var(--black);
-  text-decoration: none;
-}
-
-.show-link {
-  visibility: visible;
-  z-index: 100;
-}
-
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 /* ### INDEX ### */
 
+#title {
+  position: absolute;
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  top: 340px;
+  text-align: center;
+}
+
 .wrapper {
+  background-color: white;
   min-height: 100%;
   width: 95%;
-  margin-top: 116px;
+  margin-top: 80vh;
+  border-radius: 40px;
+  padding: 40px;
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.15), 0 0 100px 0 rgba(25, 25, 25, 0.1);
+  z-index: 10;
+  transform: translateZ(10px);
 }
 
 .post-wrapper {
-  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 20px;
   padding: 10px;
 }

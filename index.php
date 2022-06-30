@@ -1,7 +1,8 @@
 <?php
 	get_header();
 ?>
-
+<div id="bg"></div>
+<h1 id="title">Związek Drużyn "Złota Ósemka"</h1>
 <article class="wrapper">
 	<h2>AKTUALNOŚCI</h2>
 		<div class="post-wrapper">

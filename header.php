@@ -15,7 +15,7 @@
 </head> 
 
 <body id="home">
-	<nav>
+	<nav id="navbar">
 		<?php
 			if(function_exists('the_custom_logo')){
 				$custom_logo_id = get_theme_mod('custom_logo');
@@ -40,6 +40,3 @@
 		</div>
 		<btn class="toggle-nav" href=""><i class="fas fa-bars"></i></btn>
 	</nav>
-	<a class="scroll-link top-link" href="#home">
-    	<i class="fas fa-arrow-up"></i>
-    </a>

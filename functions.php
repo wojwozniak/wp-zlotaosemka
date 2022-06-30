@@ -35,6 +35,10 @@ function zlotaosemka_register_scripts() {
 	wp_enqueue_script('zlotaosemka-jquery', 'https://code.jquery.com/jquery-3.4.1.slim.min.js', array(), '3.4.1', true);
 	wp_enqueue_script('zlotaosemka-popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', array(), '1.16.0', true);
 	wp_enqueue_script('zlotaosemka-main', get_template_directory_uri() .'/assets/js/main.js', array(), '1.0', true);
+	if (is_front_page() == true) {
+		wp_enqueue_script('pustynnaburza-frontpage-nav', get_template_directory_uri() .'/assets/js/frontnav.js', array(), '1.0', true);
+	} 
+
 }
 
 add_action('wp_enqueue_scripts', 'zlotaosemka_register_scripts');
