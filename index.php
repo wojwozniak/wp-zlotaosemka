@@ -3,8 +3,12 @@
 ?>
 <div id="bg"></div>
 <h1 id="title">Związek Drużyn "Złota Ósemka"</h1>
-<article class="wrapper">
-	<h2>AKTUALNOŚCI</h2>
+<div id="root">
+	<article class="sidebar">
+		<h2>KALENDARZ</h2>
+	</article>
+	<article class="wrapper narrow">
+		<h2>AKTUALNOŚCI</h2>
 		<div class="post-wrapper">
 			<?php
 				if( have_posts() ){
@@ -17,6 +21,8 @@
 			<?php the_posts_pagination(); ?>
 		</div>
 	</article>
+</div>
+
 
 <?php
 	get_footer();

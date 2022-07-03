@@ -29,7 +29,7 @@ Author URI: https://github.com/wojwozniak
 
 html,body {
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: auto;
 }
 
@@ -42,6 +42,7 @@ body {
   font-weight: 300;
   min-height: 800px;
   align-items: center;
+  color: black;
 }
 
 #bg {
@@ -50,7 +51,7 @@ body {
   background-size: cover !important;
   position: absolute;
   height: 90vh;
-  z-index: -1;
+  z-index: -10;
   bottom: 0;
   top: 0;
   left: 0;
@@ -163,8 +164,9 @@ nav {
   font-weight: 400;
   height: 86px;
   position: fixed;
+  left: 0;
   text-transform: uppercase;
-  z-index: 1000;
+  z-index: 2;
   transition-duration: 0.4s;
 }
 
@@ -198,7 +200,7 @@ nav {
   padding: 20px;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1150px) {
   #menu-navbar li {
     padding-left: 40px;
     padding-right: 40px;
@@ -226,6 +228,11 @@ nav {
     to   { opacity: 1; }
 }
 
+#main-nav ul li {
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
 #main-nav ul li:hover {
   background-color: rgba(0, 0, 0, 0.6);
   transition-duration: 0.2s;
@@ -234,6 +241,10 @@ nav {
 
 #main-nav ul .menu-item-has-children:hover {
   border-radius: 10px 10px 0px 0px !important;
+}
+
+#main-nav ul li:not(.menu-item-has-children):hover {
+  border: 1px solid gold;
 }
 
 
@@ -310,7 +321,7 @@ nav {
   transform: rotate(90deg);
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 870px) {
   nav {
     background-color: rgba(0,0,0,0.8);
   }
@@ -321,6 +332,7 @@ nav {
 
   #menu-navbar {
     display: none;
+    gap: 0px;
   }
 
   .active {
@@ -329,20 +341,25 @@ nav {
     height: fit-content !important;
     padding: 0px;
     left: calc(100vw - 293px);
-    top: 78px;
+    top: 77px;
     position: fixed;
     width: 200px !important;
-    flex-shrink: 0;
+    margin-left: 0px !important;
   }
 
   .active li {
     width: 200px !important;
     background-color:rgba(0, 0, 0, 0.6);
+    border: 1px solid transparent;
   }
 
   .active li:hover {
     border-radius: 0px !important;
     background-color: black !important;
+  }
+
+  #main-nav ul .menu-item-has-children:hover {
+    border-radius: 0px !important;
   }
 
   .sub-menu {
@@ -371,16 +388,35 @@ nav {
   text-align: center;
 }
 
+#root {
+  margin-top: 80vh;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+.sidebar {
+  width: 30%;
+  background-color: white;
+  border-radius: 40px;
+  padding: 40px;
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.15), 0 0 100px 0 rgba(25, 25, 25, 0.1);
+  height: 400px;
+}
+
 .wrapper {
   background-color: white;
   min-height: 100%;
   width: 95%;
-  margin-top: 80vh;
   border-radius: 40px;
   padding: 40px;
   box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.15), 0 0 100px 0 rgba(25, 25, 25, 0.1);
-  z-index: 10;
-  transform: translateZ(10px);
+}
+
+.narrow {
+  width: 65% !important;
 }
 
 .post-wrapper {
