@@ -19,6 +19,7 @@ Author URI: https://github.com/wojwozniak
     --whitesmoke: #f0f0f0;
     --black: #000000;
     --gold: #FFC700;
+    --darkgold: #b8960d;
     --spacing: 0.25rem;
     --radius: 0.5rem;
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -58,17 +59,8 @@ body {
   right: 0;
 }
 
-#bg:before, #bg:after {
-  content: ' ';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-  background-color: black;
-  box-sizing: border-box;
+#bg {
+  filter: brightness(0.8);
 }
 
 a.button {
@@ -168,7 +160,7 @@ nav {
 }
 
 .fixed {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,1);
 }
 
 #main-nav {
@@ -231,7 +223,7 @@ nav {
 }
 
 #main-nav ul li:hover {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.5);
   transition-duration: 0.2s;
   border-radius: 10px 10px 10px 10px;
 }
@@ -259,7 +251,7 @@ nav {
   list-style-type: none;
   padding: 0px;
   max-width: 60vw;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.85);
   box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
 }
 
@@ -320,7 +312,7 @@ nav {
 
 @media screen and (max-width: 870px) {
   nav {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,1);
   }
 
   .toggle-nav {
@@ -337,8 +329,8 @@ nav {
     flex-direction: column;
     height: fit-content !important;
     padding: 0px;
-    left: calc(100vw - 293px);
-    top: 77px;
+    left: calc(100vw - 283px);
+    top: 78px;
     position: fixed;
     width: 200px !important;
     margin-left: 0px !important;
@@ -346,7 +338,7 @@ nav {
 
   .active li {
     width: 200px !important;
-    background-color:rgba(0, 0, 0, 0.6);
+    background-color:rgba(0, 0, 0, 1);
     border: 1px solid transparent;
   }
 
@@ -361,7 +353,7 @@ nav {
 
   .sub-menu {
     border-radius: 10px 0px 0px 10px;
-    transform: translate(-240px, -78px);
+    transform: translate(-240px, -79px);
   }
 
   .sub-menu li {
@@ -406,17 +398,60 @@ nav {
 .wrapper {
   background-color: white;
   min-height: 100%;
-  width: 95%;
+  width: 65%;
   border-radius: 40px;
   padding: 40px;
   box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.15), 0 0 100px 0 rgba(25, 25, 25, 0.1);
 }
 
-.narrow {
-  width: 65% !important;
+@media screen and (max-width: 870px) {
+  .wrapper {
+    width: 95%;
+  }
+
+  .sidebar {
+    width: 95%;
+  }
+  
+  #root {
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
 
 .post-wrapper {
   border-radius: 20px;
   padding: 10px;
+}
+
+
+/* archive template */
+
+.post-preview {
+  margin-top: 35px;
+}
+
+.post-elements {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.preview-title a {
+  color: var(--black);
+  transition: all .2s;
+}
+
+.preview-title a:hover {
+  color: var(--gold);
+}
+
+.more-link {
+  color: var(--gold);
+  transition: all .2s;
+}
+
+.more-link:hover {
+  color: var(--darkgold);
 }

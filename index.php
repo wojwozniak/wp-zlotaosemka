@@ -4,10 +4,15 @@
 <div id="bg"></div>
 <h1 id="title">Związek Drużyn "Złota Ósemka"</h1>
 <div id="root">
-	<article class="sidebar">
-		<h2>KALENDARZ</h2>
-	</article>
-	<article class="wrapper narrow">
+	<div class="sidebar">
+		<article class="sidebar-element">
+			<h2>KALENDARZ</h2>
+		</article>
+		<article class="sidebar-element">
+			
+		</article>
+	</div>
+	<article class="wrapper">
 		<h2>AKTUALNOŚCI</h2>
 		<div class="post-wrapper">
 			<?php
