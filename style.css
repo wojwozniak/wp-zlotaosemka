@@ -24,6 +24,7 @@ Author URI: https://github.com/wojwozniak
     --accenttrans3: rgba(0, 0, 0, 0.85);
     --action: #FFC700;
     --actiondarker: #b8960d;
+    --footer: #786820;
     --spacing: 0.25rem;
     --radius: 0.5rem;
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -460,8 +461,8 @@ nav {
 }
 
 .footer {
-  background-color: var(--actiondarker);
+  background-color: var(--footer);
   width: 100%;
-  height: 100px;
+  min-height: 100px;
   margin-top: 20px;
 }

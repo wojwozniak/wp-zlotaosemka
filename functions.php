@@ -13,7 +13,8 @@ add_action('after_setup_theme', 'zlotaosemka_theme_support');
 function zlotaosemka_menus(){
 
 	$locations = array(
-		'primary' => "Główny górny pasek menu"
+		'primary' => "Główny górny pasek menu",
+		'footer' => "Menu w stópce"
 	);
 	
 	register_nav_menus($locations);
