@@ -14,17 +14,22 @@ Author URI: https://github.com/wojwozniak
 
 :root {
     /* Theme's colour scheme */
-    --brightblack: #36454f;
-    --white: rgb(255, 255, 255);
-    --whitesmoke: #f0f0f0;
-    --black: #000000;
-    --gold: #FFC700;
-    --darkgold: #b8960d;
+    --main: rgb(255, 255, 255);
+    --maindarker: #f0f0f0;
+    --accent: #000000;
+    --accentdarker: #36454f;
+    --transparent: rgba(0,0,0,0);
+    --accenttrans1: rgba(0, 0, 0, 0.35);
+    --accenttrans2: rgba(0, 0, 0, 0.5);
+    --accenttrans3: rgba(0, 0, 0, 0.85);
+    --action: #FFC700;
+    --actiondarker: #b8960d;
     --spacing: 0.25rem;
     --radius: 0.5rem;
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     --breakpoint: 992px;
+    --main-shadow: 0px 30px 50px rgba(0, 0, 0, 0.15), 0 0 100px 0 rgba(25, 25, 25, 0.1);
 
 }
 
@@ -36,14 +41,14 @@ html,body {
 
 body {
   display: flex;
-  background-color: whitesmoke;
+  background-color: var(--maindarker);
   flex-direction: column;
-  color: var(--brightblack);
+  color: var(--accentdarker);
   font-family: 'Exo', sans-serif;
   font-weight: 300;
   min-height: 800px;
   align-items: center;
-  color: black;
+  color: var(--accent);
 }
 
 #bg {
@@ -82,7 +87,6 @@ a.button {
 .btn {
   align-items: center;
   text-align: center;
-  background-color: var(--brightgray);
   margin: 5px;
   border-radius: 16px;
   box-sizing: border-box;
@@ -104,7 +108,7 @@ a.button {
 
 .btn:active {
   transform: translateY(-2px);
-  border: 1px solid black;
+  border: 1px solid var(--accent);
 }
 
 .btn:focus {
@@ -148,7 +152,7 @@ nav {
   width: 100%;
   display: flex;
   flex-direction: row;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: var(--accenttrans1);
   font-size: 12px;
   font-weight: 400;
   height: 86px;
@@ -160,7 +164,7 @@ nav {
 }
 
 .fixed {
-  background-color: rgba(0,0,0,1);
+  background-color: var(--accent);
 }
 
 #main-nav {
@@ -223,7 +227,7 @@ nav {
 }
 
 #main-nav ul li:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--accenttrans2);
   transition-duration: 0.2s;
   border-radius: 10px 10px 10px 10px;
 }
@@ -233,12 +237,12 @@ nav {
 }
 
 #main-nav ul li:not(.menu-item-has-children):hover {
-  border: 1px solid gold;
+  border: 1px solid var(--action);
 }
 
 
 #main-nav ul li:hover > a {
-  color: gold !important;
+  color: var(--action) !important;
 }
 
 #main-nav ul ul {
@@ -251,8 +255,7 @@ nav {
   list-style-type: none;
   padding: 0px;
   max-width: 60vw;
-  background: rgba(0, 0, 0, 0.85);
-  box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+  background: var(--accenttrans3);
 }
 
 #main-nav li {
@@ -261,7 +264,7 @@ nav {
 
 #main-nav a {
   text-decoration: none;
-  color: white;
+  color: var(--main);
 }
 
 .sub-menu {
@@ -269,7 +272,7 @@ nav {
 }
 
 .sub-menu li {
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid var(--transparent);
   border-radius: 10px;
   width: 240px !important;
   padding: 14px 10px 14px 10px !important;
@@ -281,12 +284,12 @@ nav {
 }
 
 .sub-menu li:hover {
-  border: 1px solid gold;
+  border: 1px solid var(--action);
   border-radius: 10px !important;
 }
 
 .sub-menu li:hover > a {
-  color: gold !important;
+  color: var(--action) !important;
 }
 
 /* responsive */
@@ -297,12 +300,12 @@ nav {
   right: 22px;
   font-size: 25px;
   display: none;
-  color: white;
+  color: var(--main);
   transition: 0.4s;
 }
 
 .toggle-nav:hover {
-  color: gold;
+  color: var(--action);
   cursor: pointer;
 }
 
@@ -312,7 +315,7 @@ nav {
 
 @media screen and (max-width: 870px) {
   nav {
-    background-color: rgba(0,0,0,1);
+    background-color: var(--accent);
   }
 
   .toggle-nav {
@@ -338,13 +341,13 @@ nav {
 
   .active li {
     width: 200px !important;
-    background-color:rgba(0, 0, 0, 1);
+    background-color: var(--accent);
     border: 1px solid transparent;
   }
 
   .active li:hover {
     border-radius: 0px !important;
-    background-color: black !important;
+    background-color: var(--accent) !important;
   }
 
   #main-nav ul .menu-item-has-children:hover {
@@ -370,7 +373,7 @@ nav {
 
 #title {
   position: absolute;
-  color: white;
+  color: var(--main);
   font-size: 48px;
   font-weight: 700;
   top: 340px;
@@ -388,20 +391,20 @@ nav {
 
 .sidebar {
   width: 30%;
-  background-color: white;
+  background-color: var(--main);
   border-radius: 40px;
   padding: 40px;
-  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.15), 0 0 100px 0 rgba(25, 25, 25, 0.1);
+  box-shadow: var(--main-shadow);
   height: 400px;
 }
 
 .wrapper {
-  background-color: white;
+  background-color: var(--main);
   min-height: 100%;
   width: 65%;
   border-radius: 40px;
   padding: 40px;
-  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.15), 0 0 100px 0 rgba(25, 25, 25, 0.1);
+  box-shadow: var(--main-shadow);
 }
 
 @media screen and (max-width: 870px) {
@@ -439,19 +442,26 @@ nav {
 }
 
 .preview-title a {
-  color: var(--black);
+  color: var(--accent);
   transition: all .2s;
 }
 
 .preview-title a:hover {
-  color: var(--gold);
+  color: var(--action);
 }
 
 .more-link {
-  color: var(--gold);
+  color: var(--action);
   transition: all .2s;
 }
 
 .more-link:hover {
-  color: var(--darkgold);
+  color: var(--actiondarker);
+}
+
+.footer {
+  background-color: var(--actiondarker);
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
 }
