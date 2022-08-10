@@ -1,10 +1,8 @@
 
-<footer>
-                  
+<footer class="footer">
+        aaa  
       
 </footer>
 
- <?php
-    	wp_footer();
-    ?>
+ <?php wp_footer(); ?>
 </body>
