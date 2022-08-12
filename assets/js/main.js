@@ -1,6 +1,6 @@
 
 // Small screen sub-menu display
-const menuItems = document.querySelectorAll(".menu-item-has-children");
+const menuItems = document.getElementById("menu-navbar").querySelectorAll(".menu-item-has-children");
 
 for (let i = 0; i < menuItems.length; i++) {
   menuItems[i].addEventListener("click", (e) => {

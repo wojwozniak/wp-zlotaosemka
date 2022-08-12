@@ -355,7 +355,7 @@ nav {
     border-radius: 0px !important;
   }
 
-  .sub-menu {
+  #menu-navbar .sub-menu {
     border-radius: 10px 0px 0px 10px;
     transform: translate(-240px, -79px);
   }
@@ -463,6 +463,42 @@ nav {
 .footer {
   background-color: var(--footer);
   width: 100%;
-  min-height: 100px;
+  height: fit-content;
   margin-top: 20px;
+}
+
+#footer-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+
+#footer-menu .sub-menu {
+  padding: 0px;
+}
+
+#footer-menu li {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 5px !important;
+}
+
+#footer-menu li a {
+  width: 100%;
+}
+
+#footer-menu li a:not(.sub-menu li a) {
+  color: var(--main);
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: default;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#footer-menu .sub-menu li a {
+  color: var(--action);
 }
