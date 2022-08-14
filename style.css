@@ -24,7 +24,7 @@ Author URI: https://github.com/wojwozniak
     --accenttrans3: rgba(0, 0, 0, 0.85);
     --action: #FFC700;
     --actiondarker: #b8960d;
-    --footer: #786820;
+    --footer:  #A4973F;
     --spacing: 0.25rem;
     --radius: 0.5rem;
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -465,6 +465,14 @@ nav {
   width: 100%;
   height: fit-content;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
 
 #footer-menu {
@@ -473,6 +481,7 @@ nav {
   flex-direction: row;
   align-items: flex-start;
   margin-top: 15px;
+  flex-wrap: wrap;
 }
 
 #footer-menu .sub-menu {
@@ -501,4 +510,35 @@ nav {
 
 #footer-menu .sub-menu li a {
   color: var(--action);
+}
+
+.socials-wrapper {
+  margin: 10px;
+}
+
+.socials {
+  padding: 0;
+  text-align: left;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  font-size: 2rem;
+}
+
+.socials a {
+  border: 1px solid transparent;
+  color: var(--action);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.socials a:hover {
+  border: 1px solid var(--action);
+  text-decoration: none;
+}
+
+#footer-s-title {
+  color: white;
+  margin-bottom: 8px;
 }
