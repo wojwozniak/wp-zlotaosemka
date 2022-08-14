@@ -497,6 +497,15 @@ nav {
 
 #footer-menu li a {
   width: 100%;
+  transition: .4s all;
+}
+
+#footer-menu .sub-menu li:hover {
+  border: 1px solid transparent;
+}
+
+#footer-menu .sub-menu li:hover > a {
+  color: var(--main) !important;
 }
 
 #footer-menu li a:not(.sub-menu li a) {
@@ -531,14 +540,15 @@ nav {
   color: var(--action);
   padding: 5px;
   border-radius: 10px;
+  transition: .4s all;
 }
 
 .socials a:hover {
-  border: 1px solid var(--action);
   text-decoration: none;
+  color: var(--main);
 }
 
 #footer-s-title {
-  color: white;
+  color: var(--main);
   margin-bottom: 8px;
 }
