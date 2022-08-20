@@ -38,7 +38,9 @@ function zlotaosemka_register_scripts() {
 	wp_enqueue_script('zlotaosemka-main', get_template_directory_uri() .'/assets/js/main.js', array(), '1.0', true);
 	if (is_front_page() == true) {
 		wp_enqueue_script('pustynnaburza-frontpage-nav', get_template_directory_uri() .'/assets/js/frontnav.js', array(), '1.0', true);
-	} 
+	} else {
+		wp_enqueue_script('pustynnaburza-other-nav', get_template_directory_uri() .'/assets/js/other.js', array(), '1.0', true);
+	}
 
 }
 

@@ -42,3 +42,14 @@ window.addEventListener("resize", () => {
     }
   }
 });
+
+// Copyright year updating
+const copyrightParagraph = document.querySelector('.copyright');
+
+window.addEventListener('DOMContentLoaded', () => {
+  var copyrightDate = new Date();
+  var copyrightYear = copyrightDate.getFullYear();
+  if (copyrightYear > 2022) {
+    copyrightParagraph.textContent = `Copyright © 2013-${copyrightYear}<br>Złota Ósemka`;
+  }
+});
