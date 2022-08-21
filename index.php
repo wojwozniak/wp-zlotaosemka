@@ -8,8 +8,10 @@
 		<article class="sidebar-element">
 			<h2>KALENDARZ</h2>
 		</article>
-		<article class="sidebar-element">
-			
+		<article class="sidebar-element logos">
+		<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/i1.jpg' ); ?>" alt="" class="sidebar-logo">
+		<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/i2.png' ); ?>" alt="" class="sidebar-logo">
+		<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/i3.jpg' ); ?>" alt="" class="sidebar-logo">
 		</article>
 	</div>
 	<article class="wrapper">

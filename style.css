@@ -390,11 +390,25 @@ nav {
 
 .sidebar {
   width: 30%;
+}
+
+.sidebar-element {
   background-color: var(--main);
   border-radius: 40px;
+  width: 100%;
   padding: 40px;
   box-shadow: var(--main-shadow);
-  height: 400px;
+  min-height: 400px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.sidebar-logo {
+  width: auto;
+  max-height: 100px;
+  margin: auto;
 }
 
 .wrapper {
@@ -404,10 +418,6 @@ nav {
   border-radius: 40px;
   padding: 40px;
   box-shadow: var(--main-shadow);
-}
-
-.site {
-  min-height: 400px;
 }
 
 @media screen and (max-width: 870px) {
@@ -576,35 +586,112 @@ nav {
 
 /* Sites */
 
-#sitebg {
-  background-image: url("./assets/images/background.jpg");
-  background-position: center;
-  background-size: cover !important;
+.site {
+  min-height: 400px;
+  width: 100% !important;
+  background-color: var(--main);
+  width: 65%;
+  border-radius: 40px;
+  box-shadow: var(--main-shadow);
+}
+
+#articles {
+  padding: 40px;
+}
+
+.site-bg {
   position: absolute;
-  height: 90vh;
+  height: 50vh;
+  margin-top: 86px;
+  min-width: 100%;
+  width: auto;
   z-index: -10;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  filter: brightness(0.8);
+  filter: brightness(.5);
+  background-position: top center;
+  background-attachment:scroll;
+  background-size: cover;
+  object-fit: cover;
 }
 
 #site-root {
-  margin-top: 80vh;
+  margin-top: 60vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 30px;
   justify-content: center;
-  width: 100%;
+  width: 90%;
 }
 
 #site-title {
   position: absolute;
   color: var(--main);
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 700;
-  top: 340px;
+  top: 300px;
   text-align: center;
   text-decoration: none;
+}
+
+#buttons {
+  width: 100%;
+  height: 60px;
+  border-radius: 40px 40px 0px 0px;
+  gap: 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+.sitebtn {
+  width: 25%;
+  border: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin: 0px;
+  background-color: var(--maindarker);
+  border-bottom: 2px solid var(--accentdarker);
+}
+
+.sitebtn:hover:not(.currentbtn) {
+  background-color: var(--action);
+}
+
+.sitebtn:focus {
+  outline: none;
+}
+
+.sitebtn:first-of-type {
+  border-radius: 40px 0px 0px 0px;
+}
+
+.sitebtn:last-of-type {
+  border-radius: 0px 40px 0px 0px;
+}
+
+.sitebtn:not(:first-of-type) {
+  border-left: 1px solid var(--accentdarker);
+}
+
+.sitebtn:not(:last-of-type) {
+  border-right: 1px solid var(--accentdarker);
+}
+
+.currentbtn {
+  border: none;
+  background-color: var(--main);
+}
+
+#descs {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+
+.desc {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.displaydesc {
+  display: inline !important;
 }
