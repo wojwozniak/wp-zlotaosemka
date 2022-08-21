@@ -17,9 +17,48 @@
 				<p>Drużyna prężnie działa od 2016 roku, zbiórki odbywają się co tydzień o 21:30.</p>
 			</div>
 			<div id="d-kadra" class="desc">
-				<p>
-					Drużynowa Przyboczna itp
-				</p>
+				 <!-- # Start of single person -->
+				 <div class="c-person">
+                    <div class="c-person-pic">
+                        <img class = "c-pic" src="<?php echo get_template_directory_uri(); ?>/assets/images/aaa.jpg">
+                    </div>
+                    <div class="c-person-data">
+                        <p>pwd. Dominik "Bela" Belicki</p>
+                        <p>Zespół ds. Programu</p>
+                    </div>
+                    <div class="c-person-contactdata">
+                        <p>dominik.belicki@zhp.net.pl</p>
+                    </div>
+                </div> 
+                <!-- # End of single person -->
+                <!-- # Start of single person -->
+                <div class="c-person">
+                    <div class="c-person-pic">
+                        <img class = "c-pic" src="<?php echo get_template_directory_uri(); ?>/assets/images/aaa.jpg">
+                    </div>
+                    <div class="c-person-data">
+                        <p>pwd. Maciej Grądal</p>
+                        <p>Zespół ds. Finansów</p>
+                    </div>
+                    <div class="c-person-contactdata">
+                        <p>maciej.gradal@zhp.net.pl</p>
+                    </div>
+                </div> 
+                <!-- # End of single person -->
+                 <!-- # Start of single person -->
+                 <div class="c-person">
+                    <div class="c-person-pic">
+                        <img class = "c-pic" src="<?php echo get_template_directory_uri(); ?>/assets/images/aaa.jpg">
+                    </div>
+                    <div class="c-person-data">
+                        <p>pwd. Karolina Koza</p>
+                        <pZespół ds. Promocji</p>
+                    </div>
+                    <div class="c-person-contactdata">
+                        <p>karolina.koza@zhp.net.pl</p>
+                    </div>
+                </div> 
+                <!-- # End of single person -->
 			</div>
 			<div id="d-dokumenty" class="desc">
 				Dokumenty
