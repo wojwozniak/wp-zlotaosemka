@@ -7,13 +7,18 @@
 <div id="site-root">
 	<article class="site">
 		<div id="buttons">
-			<button id="opis" class="sitebtn currentbtn">O Drużynie</button>
+            <button id="biwak" class="sitebtn currentbtn">Biwak</button>
+			<button id="opis" class="sitebtn">O Drużynie</button>
 			<button id="kadra" class="sitebtn">Kadra</button>
-			<button id="dokumenty" class="sitebtn">Dokumenty</button>
-			<button id="umundurowanie" class="sitebtn">Umundurowanie</button>
+            <button id="historia" class="sitebtn">Historia drużyny</button>
+			<button id="dokumenty" class="sitebtn">Dokumenty i umundurowanie</button>
+			
 		</div>
 		<div id="descs">
-			<div id="d-opis" class="desc displaydesc">
+            <div id="d-biwak" class="desc displaydesc">
+				<p>Informacje o biwaku</p>
+			</div>
+			<div id="d-opis" class="desc">
 				<p>Drużyna prężnie działa od 2016 roku, zbiórki odbywają się co tydzień o 21:30.</p>
 			</div>
 			<div id="d-kadra" class="desc">
@@ -61,10 +66,10 @@
                 <!-- # End of single person -->
 			</div>
 			<div id="d-dokumenty" class="desc">
-				Dokumenty
+				Dokumenty i umundurowanie
 			</div>
-			<div id="d-umundurowanie" class="desc">
-				Umundurowanie
+			<div id="d-historia" class="desc">
+				Tutaj historia drużyny
 			</div>
 		</div>
 	</article>
