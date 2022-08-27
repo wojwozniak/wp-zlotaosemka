@@ -72,5 +72,7 @@ d) Przyjaciele - nazwa do zmiany
 - Zapotrzebowanie/Wesprzyj nas - aktualizacja zapotrzebowania, content strony
 
 e) Przekaż nam 1% - dłuższy opis z zachętą i podziękowaniem, parę zdjęć? Można zrobić jedną dużą grafikę (???)
+
 f) Galeria - W stylu tej na PB, w momencie w którym mamy kilka albumów z jednego wydarzenia mogę zrobić takie otwierane okienko z linkami do wszystkich części
+
 g) Dołącz do nas - content strony
