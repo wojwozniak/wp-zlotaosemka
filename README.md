@@ -1,4 +1,13 @@
-# A project of new wordpress site for ZHP Złota Ósemka
+# Projekt nowej strony wordpress dla Złotej Ósemki
+
+## Setup
+
+- Stworzenie dwóch menu, dodanie kart z todolist
+
+- Skróty jednostek takie same jak skróty kategorii!
+
+- Cover photo strony wyświetla się jako tło
+
 
 
 ### To do list
