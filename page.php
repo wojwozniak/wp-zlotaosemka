@@ -2,9 +2,14 @@
 	get_header();
 ?>
 
-<article class="site">
+<div class="single-wrapper">
+	<article class="article">
+		<div id="page-wrapper">
+			<p>AAAA</p>
+		</div>
+	</article>
+</div>
 
-</article>
 
 <?php
 	get_footer();
