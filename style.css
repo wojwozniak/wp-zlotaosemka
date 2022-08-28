@@ -23,7 +23,7 @@ Author URI: https://github.com/wojwozniak
     --accenttrans2: rgba(0, 0, 0, 0.5);
     --accenttrans3: rgba(0, 0, 0, 0.85);
     --action: #FFC700;
-    --actiondarker: #daa520;
+    --actiondarker: #E8A20C;
     --footer:  #b8860b;
     --footerdarker: #85754e;
     --spacing: 0.25rem;
@@ -738,7 +738,8 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 300px;
+  min-height: 500px;
+  width: 100%;
 }
 
 #single-post-wrapper {

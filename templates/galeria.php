@@ -1,7 +1,8 @@
 <?php
+    /* Template name: Galeria */
 	get_header();
 ?>
-<img id="site-bg" style="background-image: url("<?php the_post_thumbnail('thumbnail',['class' => 'site-bg', 'title' => 'Tło']); ?>
+
 <div class="single-wrapper">
 	<article class="article">
 		<div id="page-wrapper">
