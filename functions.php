@@ -25,7 +25,7 @@ add_action('init', 'zlotaosemka_menus');
 function zlotaosemka_register_styles() {
 
 	$version = wp_get_theme()->get( 'Version' );
-	wp_enqueue_style('zlotaosemka-style', get_template_directory_uri() . "/style.css", array('zlotaosemka-bootstrap'), $version, 'all');
+	wp_enqueue_style('zlotaosemka-style', get_template_directory_uri() . "/style.scss", array('zlotaosemka-bootstrap'), $version, 'all');
 	wp_enqueue_style('zlotaosemka-bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", array(), '4.4.1', 'all');
 }
 
