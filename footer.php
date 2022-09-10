@@ -1,4 +1,5 @@
         <footer id="foot" class="footer">
+                <hr class="hr">
                 <div class="footer-content">
                         <?php wp_nav_menu(
                                 array(

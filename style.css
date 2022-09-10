@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /*
 Theme Name: Złota Ósemka
@@ -22,10 +22,8 @@ Author URI: https://github.com/wojwozniak
     --accenttrans1: rgba(0, 0, 0, 0.35);
     --accenttrans2: rgba(0, 0, 0, 0.5);
     --accenttrans3: rgba(0, 0, 0, 0.85);
-    --action: #FFC700;
+    --action: #F8BF16;
     --actiondarker: #E8A20C;
-    --footer:  #b8860b;
-    --footerdarker: #85754e;
     --spacing: 0.25rem;
     --radius: 0.5rem;
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -43,10 +41,10 @@ html,body {
 
 body {
   display: flex;
-  background-color: var(--maindarker);
+  background-color: rgba(0,0,0,.6);
   flex-direction: column;
   color: var(--accentdarker);
-  font-family: 'Exo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 300;
   min-height: 800px;
   align-items: center;
@@ -142,7 +140,8 @@ li a {
   height: fit-content;
   width: fit-content;
   margin-left: 30px;
-  margin-top: 8px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /* navigation */
@@ -152,9 +151,9 @@ nav {
   display: flex;
   flex-direction: row;
   background-color: var(--accenttrans1);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
-  height: 86px;
+  height: 114px;
   position: fixed;
   left: 0;
   text-transform: uppercase;
@@ -175,28 +174,23 @@ nav {
 }
 
 #menu-navbar {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   width: 100%;
-  height: 78px;
+  height: 100%;
   list-style-type: none;
   display: flex;
-  gap: 10px;
+  gap: 0px;
   justify-content: flex-end;
   margin-left: auto;
   margin-right: 10px;
+  align-items: center;
 }
 
 #menu-navbar li {
   width: fit-content;
-  padding: 20px;
-}
-
-@media screen and (min-width: 1150px) {
-  #menu-navbar li {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+  padding: 10px;
+  height: fit-content;
 }
 
 #main-nav ul {
@@ -372,11 +366,12 @@ nav {
 
 #title {
   position: absolute;
-  color: var(--main);
-  font-size: 48px;
+  color: var(--action);
+  font-size: 64px;
   font-weight: 700;
   top: 340px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 #root {
@@ -394,7 +389,7 @@ nav {
 
 .sidebar-element {
   background-color: var(--main);
-  border-radius: 40px;
+  border-radius: 15px;
   width: 100%;
   padding: 40px;
   box-shadow: var(--main-shadow);
@@ -406,8 +401,8 @@ nav {
 }
 
 .sidebar-logo {
-  width: auto;
-  max-height: 100px;
+  width: 250px;
+  height: auto;
   margin: auto;
 }
 
@@ -415,7 +410,7 @@ nav {
   background-color: var(--main);
   min-height: 100%;
   width: 65%;
-  border-radius: 40px;
+  border-radius: 15px;
   padding: 40px;
   box-shadow: var(--main-shadow);
 }
@@ -452,6 +447,11 @@ nav {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  align-items: center;
+}
+
+.preview-title {
+  margin-bottom: 0px;
 }
 
 .preview-title a {
@@ -463,6 +463,10 @@ nav {
   color: var(--action);
 }
 
+.meta {
+  margin-bottom: 8px;
+}
+
 .more-link {
   color: var(--action);
   transition: all .2s;
@@ -470,6 +474,14 @@ nav {
 
 .more-link:hover {
   color: var(--actiondarker);
+}
+
+/* FOOTER */
+
+.hr {
+  border: 4px solid var(--action);
+  border-radius: 2px;
+  width: 96%;
 }
 
 .footer {
@@ -591,7 +603,7 @@ nav {
   width: 100% !important;
   background-color: var(--main);
   width: 65%;
-  border-radius: 40px;
+  border-radius: 15px;
   box-shadow: var(--main-shadow);
 }
 
@@ -635,7 +647,7 @@ nav {
 #buttons {
   width: 100%;
   height: 60px;
-  border-radius: 40px 40px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
   gap: 0px;
   display: flex;
   flex-direction: row;
@@ -660,11 +672,11 @@ nav {
 }
 
 .sitebtn:first-of-type {
-  border-radius: 40px 0px 0px 0px;
+  border-radius: 15px 0px 0px 0px;
 }
 
 .sitebtn:last-of-type {
-  border-radius: 0px 40px 0px 0px;
+  border-radius: 0px 15px 0px 0px;
 }
 
 .sitebtn:not(:first-of-type) {
@@ -746,7 +758,7 @@ nav {
   background-color: var(--main);
   min-height: 100%;
   width: 90%;
-  border-radius: 40px;
+  border-radius: 15px;
   padding: 40px;
   box-shadow: var(--main-shadow);
 }
@@ -757,7 +769,7 @@ nav {
   background-color: var(--main);
   min-height: 100%;
   width: 90%;
-  border-radius: 40px;
+  border-radius: 15px;
   padding: 40px;
   box-shadow: var(--main-shadow);
 }
