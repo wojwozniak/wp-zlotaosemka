@@ -83,6 +83,10 @@ a.button {
   font-weight: 500 !important;
 }
 
+h2 {
+  font-weight: 700;
+}
+
 .btn {
   align-items: center;
   text-align: center;
@@ -370,7 +374,7 @@ nav {
   color: var(--action);
   font-size: 64px;
   font-weight: 700;
-  top: 340px;
+  top: 45vh;
   text-align: center;
   text-transform: uppercase;
 }
@@ -609,14 +613,38 @@ nav {
   box-shadow: var(--main-shadow);
 }
 
+.lower {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
 #articles {
   padding: 40px;
+  width: 70%;
+  min-height: 400px;
+  background-color: var(--main);
+  border-radius: 15px;
+  box-shadow: var(--main-shadow);
+}
+
+@media screen and (max-width: 870px) {
+  .lower {
+    flex-direction: column-reverse;
+  }
+  
+  #articles {
+    width: 100%;
+  }
+  .sidebar {
+    width: 100%;
+  }
 }
 
 .site-bg {
   position: absolute;
   height: 50vh;
-  margin-top: 86px;
+  margin-top: var(--navbarheight);
   min-width: 100%;
   width: auto;
   z-index: -10;

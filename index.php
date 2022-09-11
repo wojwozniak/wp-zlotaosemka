@@ -4,7 +4,7 @@
 <div id="bg"></div>
 <h1 id="title">Związek Drużyn "Złota Ósemka"</h1>
 <div id="root">
-	<div class="sidebar">
+	<aside class="sidebar">
 		<article class="sidebar-element">
 			<h2>KALENDARZ</h2>
 		</article>
@@ -13,7 +13,7 @@
 		<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/i2.png' ); ?>" alt="" class="sidebar-logo">
 		<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/i3.jpg' ); ?>" alt="" class="sidebar-logo">
 		</article>
-	</div>
+	</aside>
 	<article class="wrapper">
 		<h2>AKTUALNOŚCI</h2>
 		<div class="post-wrapper">
