@@ -10,10 +10,6 @@
                                         'container_aria_label' => 'footer-menu'
                                 )
                         )?>
-                        <div class="socials-wrapper">
-                                <p id="footer-s-title">SOCIAL MEDIA</p>
-                                <?php get_template_part('template-parts/socials'); ?>
-                        </div>
                 </div>
                 <div id="footer-end">
                 <p class="footer-end-text copyright">Copyright © 2013-2022 Złota Ósemka</p>

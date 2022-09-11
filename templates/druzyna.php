@@ -7,12 +7,16 @@
 <div id="site-root">
 	<article class="site">
 		<div id="buttons">
-            <button id="biwak" class="sitebtn currentbtn">Biwak</button>
+            <button id="biwak" class="sitebtn currentbtn">Ważne</button>
+            <div class="vl"></div>
 			<button id="opis" class="sitebtn">O Drużynie</button>
+            <div class="vl"></div>
 			<button id="kadra" class="sitebtn">Kadra</button>
+            <div class="vl"></div>
             <button id="historia" class="sitebtn">Historia drużyny</button>
-			<button id="dokumenty" class="sitebtn">Dokumenty i umundurowanie</button>
-			
+            <div class="vl"></div>
+			<button id="dokumenty" class="sitebtn">Dokumenty</button>
+            <div class="vl"></div>	
 		</div>
 		<div id="descs">
             <div id="d-biwak" class="desc displaydesc">

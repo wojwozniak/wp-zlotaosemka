@@ -18,9 +18,7 @@ Author URI: https://github.com/wojwozniak
     --accent: #000000;
     --accentdarker: #36454f;
     --transparent: rgba(0,0,0,0);
-    --accenttrans1: rgba(0, 0, 0, 0.35);
-    --accenttrans2: rgba(0, 0, 0, 0.5);
-    --accenttrans3: rgba(0, 0, 0, 0.85);
+    --accenttrans: rgba(0, 0, 0, 0.85);
     --action: #F8BF16;
     --actiondarker: #E8A20C;
     --spacing: 0.25rem;
@@ -29,6 +27,7 @@ Author URI: https://github.com/wojwozniak
     --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     --breakpoint: 992px;
     --main-shadow: 0px 30px 50px rgba(0, 0, 0, 0.15), 0 0 100px 0 rgba(25, 25, 25, 0.1);
+    --navbarheight: 114px;
 
 }
 
@@ -40,7 +39,10 @@ html,body {
 
 body {
   display: flex;
-  background-color: rgba(0,0,0,.6);
+  background-image: url("./assets/images/backgroundtemplate.png");
+  background-repeat: repeat;
+  background-position: center;
+  background-size:cover;
   flex-direction: column;
   color: var(--accentdarker);
   font-family: 'Inter', sans-serif;
@@ -48,6 +50,7 @@ body {
   min-height: 800px;
   align-items: center;
   color: var(--accent);
+  background-attachment:scroll;
 }
 
 #bg {
@@ -137,7 +140,7 @@ li a {
 
 #homelink {
   height: fit-content;
-  width: fit-content;
+  width: 40px;
   margin-left: 30px;
   margin-top: auto;
   margin-bottom: auto;
@@ -149,10 +152,10 @@ nav {
   width: 100%;
   display: flex;
   flex-direction: row;
-  background-color: var(--accenttrans1);
+  background-color: var(--accenttrans);
   font-size: 16px;
   font-weight: 400;
-  height: 114px;
+  height: var(--navbarheight);
   position: fixed;
   left: 0;
   text-transform: uppercase;
@@ -188,8 +191,15 @@ nav {
 
 #menu-navbar li {
   width: fit-content;
-  padding: 10px;
   height: fit-content;
+  padding-bottom: 29px;
+  padding-top: 29px;
+}
+
+#menu-navbar li ul li {
+  width: fit-content;
+  height: fit-content;
+  padding: 0px !important;
 }
 
 #main-nav ul {
@@ -218,18 +228,18 @@ nav {
   border-right: 1px solid transparent;
 }
 
-#main-nav ul li:hover {
-  background-color: var(--accenttrans2);
-  transition-duration: 0.2s;
-  border-radius: 10px 10px 10px 10px;
+#main-nav ul li a {
+  height: 56px;
+  padding: 10px;
 }
 
-#main-nav ul .menu-item-has-children:hover {
-  border-radius: 10px 10px 0px 0px !important;
+#main-nav ul li:not(.menu-item-has-children) a {
+  border: 1px solid var(--transparent);
 }
 
-#main-nav ul li:not(.menu-item-has-children):hover {
+#main-nav ul li:not(.menu-item-has-children):hover > a {
   border: 1px solid var(--action);
+  border-radius: 5px;
 }
 
 
@@ -240,14 +250,14 @@ nav {
 #main-nav ul ul {
   display: none;
   position: absolute;
-  top: 78px;
+  top: var(--navbarheight);
   left: 0;
   z-index: 10;
   min-width: 180px;
   list-style-type: none;
   padding: 0px;
   max-width: 60vw;
-  background: var(--accenttrans3);
+  background: var(--accenttrans);
 }
 
 #main-nav li {
@@ -260,24 +270,13 @@ nav {
 }
 
 .sub-menu {
-  border-radius: 0px 10px 10px 10px;
-}
-
-.sub-menu li {
-  border: 1px solid var(--transparent);
-  border-radius: 10px;
-  width: 240px !important;
-  padding: 14px 10px 14px 10px !important;
-  justify-content: left;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .sub-menu li a {
+  padding: 14px 10px 14px 10px !important;
+  width: 240px !important;
   text-align: left !important;
-}
-
-.sub-menu li:hover {
-  border: 1px solid var(--action);
-  border-radius: 10px !important;
 }
 
 .sub-menu li:hover > a {
@@ -317,6 +316,7 @@ nav {
   #menu-navbar {
     display: none;
     gap: 0px;
+    justify-content: flex-start;
   }
 
   .active {
@@ -324,17 +324,18 @@ nav {
     flex-direction: column;
     height: fit-content !important;
     padding: 0px;
-    left: calc(100vw - 283px);
-    top: 78px;
+    left: calc(100vw - 270px);
+    top: var(--navbarheight);
     position: fixed;
     width: 200px !important;
-    margin-left: 0px !important;
+    margin: 0px !important;
   }
 
   .active li {
     width: 200px !important;
     background-color: var(--accent);
     border: 1px solid transparent;
+    padding: 0px !important;
   }
 
   .active li:hover {
@@ -342,13 +343,14 @@ nav {
     background-color: var(--accent) !important;
   }
 
+
   #main-nav ul .menu-item-has-children:hover {
     border-radius: 0px !important;
   }
 
   #menu-navbar .sub-menu {
     border-radius: 10px 0px 0px 10px;
-    transform: translate(-240px, -79px);
+    transform: translate(-240px, -119px);
   }
 
   .sub-menu li {
@@ -523,25 +525,26 @@ nav {
   transition: .4s all;
 }
 
-#footer-menu .sub-menu li:hover {
-  border: 1px solid transparent;
-}
-
 #footer-menu .sub-menu li:hover > a {
-  color: var(--main) !important;
+  color: var(--action) !important;
 }
 
 #footer-menu li a:not(.sub-menu li a) {
   color: var(--main);
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
   cursor: default;
-  padding-left: 6px;
-  padding-right: 6px;
+}
+
+#footer-menu .sub-menu li {
+  padding: 0px !important;
+  margin-top: 2px;
 }
 
 #footer-menu .sub-menu li a {
-  color: var(--action);
+  color: var(--main);
+  padding: 0px !important;
 }
 
 .socials-wrapper {
@@ -650,6 +653,7 @@ nav {
   gap: 0px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .sitebtn {
@@ -658,8 +662,9 @@ nav {
   padding-left: 0px;
   padding-right: 0px;
   margin: 0px;
-  background-color: var(--maindarker);
-  border-bottom: 2px solid var(--accentdarker);
+  background-color: var(--main);
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .sitebtn:hover:not(.currentbtn) {
@@ -678,17 +683,13 @@ nav {
   border-radius: 0px 15px 0px 0px;
 }
 
-.sitebtn:not(:first-of-type) {
-  border-left: 1px solid var(--accentdarker);
-}
-
-.sitebtn:not(:last-of-type) {
-  border-right: 1px solid var(--accentdarker);
+.vl:not(:last-of-type) {
+  border-right: 2px solid var(--accent);
+  height: 30px;
 }
 
 .currentbtn {
-  border: none;
-  background-color: var(--main);
+  color: var(--action);
 }
 
 #descs {
