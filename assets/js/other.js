@@ -3,10 +3,12 @@ const nav = document.getElementById("navbar");
 nav.classList.add("fixed");
 
 // Slow scroll of background
-document.getElementById("home").onscroll = () => {  
-    var target = document.getElementById("site-bg");
-    var yvalue = window.scrollY * 0.5;
-    target.style.top = yvalue + "px";
+const target = document.getElementById("site-bg");
+document.getElementById("home").onscroll = () => {
+    let yvalue = window.scrollY * 0.5;
+    if (target !== null) {
+        target.style.top = yvalue + "px"; 
+    }
 }
 
 

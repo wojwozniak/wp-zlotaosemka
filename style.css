@@ -291,7 +291,7 @@ nav {
 
 .toggle-nav {
   position: absolute;
-  top: 25px;
+  top: 37px;
   right: 22px;
   font-size: 25px;
   display: none;
@@ -457,6 +457,14 @@ nav {
 
 .preview-title {
   margin-bottom: 0px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.thumbnail {
+  height: 200px !important;
+  width: 200px !important;
 }
 
 .preview-title a {
@@ -661,7 +669,7 @@ nav {
   width: auto;
   z-index: -10;
   filter: brightness(.5);
-  background-position: top center;
+  background-position: bottom;
   background-attachment:scroll;
   background-size: cover;
   object-fit: cover;
@@ -674,16 +682,6 @@ nav {
   gap: 30px;
   justify-content: center;
   width: 90%;
-}
-
-#site-title {
-  position: absolute;
-  color: var(--main);
-  font-size: 42px;
-  font-weight: 700;
-  top: 300px;
-  text-align: center;
-  text-decoration: none;
 }
 
 #buttons {
@@ -708,7 +706,9 @@ nav {
 }
 
 .sitebtn:hover:not(.currentbtn) {
-  background-color: var(--action);
+  text-decoration: underline;
+  color: var(--action);
+  transition: color .2s;
 }
 
 .sitebtn:focus {
@@ -782,7 +782,7 @@ nav {
 /* Single post */
 
 .single-wrapper {
-  margin-top: 100px;
+  margin-top: 114px;
   width: 100%;
 }
 
@@ -792,6 +792,14 @@ nav {
   align-items: center;
   min-height: 500px;
   width: 100%;
+  margin-top: 20px;
+}
+
+.post-thumbnail {
+  float: right;
+  width: 45%;
+  height: auto;
+  max-height:40vh;
 }
 
 #single-post-wrapper {
@@ -807,7 +815,7 @@ nav {
 
 #page-wrapper {
   background-color: var(--main);
-  min-height: 100%;
+  min-height: 400px;
   width: 90%;
   border-radius: 15px;
   padding: 40px;
