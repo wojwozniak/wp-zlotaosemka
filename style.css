@@ -16,7 +16,7 @@ Author URI: https://github.com/wojwozniak
     --main: rgb(255, 255, 255);
     --maindarker: #f0f0f0;
     --accent: #000000;
-    --accentdarker: #36454f;
+    --accentdarker: #F1F1F1;
     --transparent: rgba(0,0,0,0);
     --accenttrans: rgba(0, 0, 0, 0.85);
     --action: #F8BF16;
@@ -27,7 +27,7 @@ Author URI: https://github.com/wojwozniak
     --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     --breakpoint: 992px;
     --main-shadow: 0px 30px 50px rgba(0, 0, 0, 0.15), 0 0 100px 0 rgba(25, 25, 25, 0.1);
-    --navbarheight: 114px;
+    --navbarheight: 94px;
 
 }
 
@@ -50,7 +50,6 @@ body {
   min-height: 800px;
   align-items: center;
   color: var(--accent);
-  background-attachment:scroll;
 }
 
 #bg {
@@ -291,7 +290,7 @@ nav {
 
 .toggle-nav {
   position: absolute;
-  top: 37px;
+  top: 28px;
   right: 22px;
   font-size: 25px;
   display: none;
@@ -656,9 +655,6 @@ nav {
   #articles {
     width: 100%;
   }
-  .sidebar {
-    width: 100%;
-  }
 }
 
 .site-bg {
@@ -691,39 +687,42 @@ nav {
   gap: 0px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-around;
 }
 
-.sitebtn {
-  width: 25%;
+.btnstyle {
+  width: fit-content;
   border: 0px;
   padding-left: 0px;
   padding-right: 0px;
-  margin: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
   background-color: var(--main);
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.sitebtn:hover:not(.currentbtn) {
+.btnstyle:hover:not(.currentbtn) {
   text-decoration: underline;
   color: var(--action);
   transition: color .2s;
 }
 
-.sitebtn:focus {
+.btnstyle:focus {
   outline: none;
 }
 
-.sitebtn:first-of-type {
+.btnstyle:first-of-type {
   border-radius: 15px 0px 0px 0px;
 }
 
-.sitebtn:last-of-type {
+.btnstyle:last-of-type {
   border-radius: 0px 15px 0px 0px;
 }
 
-.vl:not(:last-of-type) {
+.vl {
   border-right: 2px solid var(--accent);
   height: 30px;
 }
@@ -820,4 +819,156 @@ nav {
   border-radius: 15px;
   padding: 40px;
   box-shadow: var(--main-shadow);
+}
+
+/* galeria template */
+
+.k-past-container {
+  padding-top: 30px;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.displaygal {
+  display: flex !important;
+}
+
+.k-past {
+  background-color: var(--accentdarker);
+  height: 225px;
+  width: 225px;
+  text-align: center;
+  margin: 30px;
+  font-weight: bold !important;
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.15), 0 0 100px 0 rgba(25, 25, 25, 0.1);
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.k-past:active {
+  transform: translateY(-2px);
+}
+
+.k-past:hover {
+  border: 3px solid gold;
+  background-color: transparent;
+  box-shadow: 10px 40px 60px rgba(0, 0, 0, 0.4);
+}
+
+.k-past a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.k-past p {
+  position: relative;
+  margin-top: 100px;
+  z-index: 10;
+  transition: all 1s;
+}
+
+.k-past:hover p {
+  color: gold;
+  font-size: 20px !important;
+  transition: all 1s;
+}
+
+.k-past:hover .k-past-img {
+  opacity: 1;
+  transition: all 1s;
+  transform: scale(1.1, 1.1);
+}
+
+.k-past-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 20px;
+  transform: scale(1, 1);
+  transition: transform 0.4s;
+  filter: brightness(.4);
+  transition: all 1s;
+}
+
+/* Sponsor */
+
+.sponsor-container {
+  padding-top: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sponsor {
+  height: 225px;
+  width: 225px;
+  text-align: center;
+  margin: 30px;
+  font-weight: bold !important;
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.15), 0 0 100px 0 rgba(25, 25, 25, 0.1);
+  background-color: transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+  filter: grayscale(1);
+}
+
+.sponsor:hover {
+  background-color: var(--accentdarker);
+  border: 3px solid gold;
+  box-shadow: 10px 40px 60px rgba(0, 0, 0, 0.4);
+}
+
+.sponsor a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.sponsor p {
+  position: relative;
+  margin-top: 100px;
+  z-index: 10;
+  transition: all 1s;
+  display: none;
+}
+
+.sponsor:hover p {
+  font-size: 20px !important;
+  transition: color 1s;
+  display: block;
+  color: var(--action);
+}
+
+.sponsor:hover {
+  filter: grayscale(0);
+}
+
+.sponsor:hover .sponsor-logo {
+  opacity: 1;
+  transition: all 1s;
+  transform: scale(1.1, 1.1);
+}
+
+.sponsor-logo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  border-radius: 20px;
+  transform: scale(1, 1);
+  transition: transform 0.4s;
+  filter: brightness(.4);
+  transition: all 1s;
 }

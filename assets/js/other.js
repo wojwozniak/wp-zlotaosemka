@@ -29,10 +29,34 @@ btns.forEach(btn => {
         }
         for (let i = 0; i < newdescs.length; i++) {
             if (btn.target.id === newdescs[i]) {
-                console.log("aaa");
                 btn.target.classList.add("currentbtn");
                 descs[i].classList.add("displaydesc");
             }
         }
     })
 });
+
+// Gallery buttons display
+
+const gals = document.querySelectorAll(".gal");
+const newgals = [];
+gals.forEach(gal => {
+    const help = gal.id;
+    const newhelp = help.slice(2);
+    newgals.push(newhelp);
+});
+const galbtns = document.querySelectorAll(".galbtn");
+galbtns.forEach(btn => {
+    btn.addEventListener('click', btn => {
+        for (let i = 0; i < newgals.length; i++) {
+            gals[i].classList.remove("displaygal");
+            galbtns[i].classList.remove("currentbtn");
+        }
+        for (let i = 0; i < newgals.length; i++) {
+            if (btn.target.id === newgals[i]) {
+                btn.target.classList.add("currentbtn");
+                gals[i].classList.add("displaygal");
+            }
+        }
+    })
+}); 
