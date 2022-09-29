@@ -1,7 +1,9 @@
+const menu = document.getElementById("menu-navbar");
+const menuItems = menu.querySelectorAll(".menu-item-has-children");
+const toggleBtn = document.querySelector(".toggle-nav");
+
 
 // Small screen sub-menu display
-const menuItems = document.getElementById("menu-navbar").querySelectorAll(".menu-item-has-children");
-
 for (let i = 0; i < menuItems.length; i++) {
   menuItems[i].addEventListener("click", (e) => {
     let a = e.currentTarget.lastElementChild.classList.contains("show");
@@ -21,13 +23,11 @@ for (let i = 0; i < menuItems.length; i++) {
 }
 
 // Menu toggle
-const toggleBtn = document.querySelector(".toggle-nav");
-const menu = document.getElementById("menu-navbar");
-
 toggleBtn.addEventListener("click", (e) => {
   e.preventDefault();
   menu.classList.toggle("active");
   toggleBtn.classList.toggle("toggle-active");
+  arrows();
 });
 
 // Make sure menu doesn't stay open after resizing
@@ -41,7 +41,28 @@ window.addEventListener("resize", () => {
       menuItems[i].lastElementChild.classList.remove("show");
     }
   }
+  arrows();
 });
+
+// Add down arrow to menu elements with submenus (only on small screen)
+
+const originalMenus = [];
+menuItems.forEach(item => {
+  originalMenus.push(item.childNodes[0].textContent);
+});
+
+const arrows = () => {
+  for (let i = 0; i < menuItems.length; i++) {
+    menuItems[i].childNodes[0].textContent = originalMenus[i];
+  }
+  if (menu.classList.contains('active')) {
+    menuItems.forEach(item => {
+      item.childNodes[0].textContent+=` *`;
+    });
+  }
+}
+
+arrows();
 
 // Copyright year updating
 const copyrightParagraph = document.querySelector('.copyright');

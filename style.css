@@ -213,7 +213,7 @@ nav {
   display: none;
 }
 
-@media only screen and not (hover: none) {
+@media screen and (min-width: 870px) {
   #main-nav ul li:hover > ul {
     display: block;
     animation: fadein 0.2s;
@@ -327,18 +327,29 @@ nav {
     flex-direction: column;
     height: fit-content !important;
     padding: 0px;
-    left: calc(100vw - 270px);
+    left: -44px;
     top: var(--navbarheight);
     position: fixed;
-    width: 200px !important;
+    width: 110vw !important;
+    height: calc(100vh - var(--navbarheight)) !important;
     margin: 0px !important;
+    margin-left: -20px !important;
+    background-color: var(--accent);
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  .sub-menu li a {
+    padding: 14px 10px 14px 10px !important;
+    width: auto !important;
+    text-align: center !important;
   }
 
   .active li {
-    width: 200px !important;
-    background-color: var(--accent);
     border: 1px solid transparent;
     padding: 0px !important;
+    display: flex;
+    flex-direction: column;
   }
 
   .active li:hover {
@@ -346,24 +357,20 @@ nav {
     background-color: var(--accent) !important;
   }
 
-
   #main-nav ul .menu-item-has-children:hover {
     border-radius: 0px !important;
   }
 
   #menu-navbar .sub-menu {
     border-radius: 10px 0px 0px 10px;
-    transform: translate(-240px, -119px);
-  }
-
-  .sub-menu li {
-    width: 240px !important;
-    border-radius: 0px !important;
   }
 }
 
 .show {
-  display: block !important;
+  display: flex !important;
+  flex-direction: column;
+  position: static !important;
+  align-items: center;
 }
 
 /* ### INDEX ### */

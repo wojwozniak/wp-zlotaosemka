@@ -11,7 +11,6 @@ document.getElementById("home").onscroll = () => {
     }
 }
 
-
 // Menu
 const descs = document.querySelectorAll(".desc");
 const newdescs = [];
