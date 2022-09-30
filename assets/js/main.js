@@ -3,6 +3,30 @@ const menuItems = menu.querySelectorAll(".menu-item-has-children");
 const toggleBtn = document.querySelector(".toggle-nav");
 
 
+// Add down arrow to menu elements with submenus (only on small screen)
+
+const originalMenus = [];
+menuItems.forEach(item => {
+  originalMenus.push(item.childNodes[0].textContent);
+});
+
+const arrows = () => {
+  for (let i = 0; i < menuItems.length; i++) {
+    menuItems[i].childNodes[0].textContent = originalMenus[i];
+  }
+  if (menu.classList.contains('active')) {
+    menuItems.forEach(item => {
+      item.childNodes[0].innerHTML+=`&nbsp&nbsp<i class="fa-solid fa-chevron-down"></i>`;
+      if (item.children[1].classList.contains('show')) {
+        item.children[0].children[0].classList.remove('fa-chevron-down');
+        item.children[0].children[0].classList.add('fa-chevron-up');
+      }
+    });
+  }
+}
+
+arrows();
+
 // Small screen sub-menu display
 for (let i = 0; i < menuItems.length; i++) {
   menuItems[i].addEventListener("click", (e) => {
@@ -19,6 +43,7 @@ for (let i = 0; i < menuItems.length; i++) {
     if ((window.innerWidth > 992) && e.currentTarget.lastElementChild.classList.contains("show")) {
       e.currentTarget.lastElementChild.classList.remove("show");
     }
+    arrows();
   });
 }
 
@@ -43,26 +68,6 @@ window.addEventListener("resize", () => {
   }
   arrows();
 });
-
-// Add down arrow to menu elements with submenus (only on small screen)
-
-const originalMenus = [];
-menuItems.forEach(item => {
-  originalMenus.push(item.childNodes[0].textContent);
-});
-
-const arrows = () => {
-  for (let i = 0; i < menuItems.length; i++) {
-    menuItems[i].childNodes[0].textContent = originalMenus[i];
-  }
-  if (menu.classList.contains('active')) {
-    menuItems.forEach(item => {
-      item.childNodes[0].textContent+=` *`;
-    });
-  }
-}
-
-arrows();
 
 // Copyright year updating
 const copyrightParagraph = document.querySelector('.copyright');
