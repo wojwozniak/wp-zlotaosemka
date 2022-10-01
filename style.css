@@ -263,6 +263,10 @@ nav {
   background: var(--accenttrans);
 }
 
+.fixed #main-nav ul ul {
+  background: var(--accent);
+}
+
 #main-nav li {
   position: relative;
 }
@@ -436,12 +440,17 @@ nav {
   }
 
   .sidebar {
-    width: 100%;
+    width: 95%;
+  }
+
+  .lower .sidebar {
+    width: 100% !important;
   }
   
   #root {
     flex-direction: column;
     align-items: center;
+    gap: 0px;
   }
 
 }
