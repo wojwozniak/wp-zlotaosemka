@@ -2,11 +2,18 @@
 	get_header();
 ?>
 <div id="bg"></div>
-<h1 id="title">Związek Drużyn "Złota Ósemka"</h1>
+<div id="title">
+	<h1 class="title-part">Związek Drużyn</h1>
+	<h1 class="title-part">"Złota Ósemka"</h1>
+</div>
+
 <div id="root">
 	<aside class="sidebar">
 		<article class="sidebar-element">
 			<h2>KALENDARZ</h2>
+			<p>
+				Brak nadchodzących wydarzeń
+			</p>
 		</article>
 		<article class="sidebar-element logos">
 		<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/i1.jpg' ); ?>" alt="" class="sidebar-logo">
@@ -17,11 +24,11 @@
 	<article class="wrapper">
 		<h2>AKTUALNOŚCI</h2>
 		<div class="post-wrapper">
-		<?php                
+			<?php                
                         $args = array(
                             'post_type' => 'post',
                             'post_status' => 'publish',
-                            'category_name' => basename(get_page_link()),
+                            'category_name' => 'main',
                             'posts_per_page' => 10,
                         );
                         $arr_posts = new WP_Query( $args );

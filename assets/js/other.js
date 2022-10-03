@@ -13,6 +13,9 @@ document.getElementById("home").onscroll = () => {
 
 // Menu
 const descs = document.querySelectorAll(".desc");
+if(descs.length > 0) {
+	descs[0].classList.add('displaydesc');
+}
 const newdescs = [];
 descs.forEach(desc => {
     const help = desc.id;
@@ -20,6 +23,9 @@ descs.forEach(desc => {
     newdescs.push(newhelp);
 });
 const btns = document.querySelectorAll(".sitebtn");
+if(btns.length > 0) {
+	btns[0].classList.add('currentbtn');
+}
 btns.forEach(btn => {
     btn.addEventListener('click', btn => {
         for (let i = 0; i < newdescs.length; i++) {
@@ -38,6 +44,9 @@ btns.forEach(btn => {
 // Gallery buttons display
 
 const gals = document.querySelectorAll(".gal");
+if(gals.length > 0) {
+	gals[0].classList.add('displaygal');
+}
 const newgals = [];
 gals.forEach(gal => {
     const help = gal.id;
@@ -45,6 +54,9 @@ gals.forEach(gal => {
     newgals.push(newhelp);
 });
 const galbtns = document.querySelectorAll(".galbtn");
+if(galbtns.length > 0) {
+	galbtns[0].classList.add('currentbtn');
+}
 galbtns.forEach(btn => {
     btn.addEventListener('click', btn => {
         for (let i = 0; i < newgals.length; i++) {

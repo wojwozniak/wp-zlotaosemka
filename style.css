@@ -3,7 +3,7 @@
 /*
 Theme Name: Złota Ósemka
 Text Domain: Złota Ósemka
-Version: 0.2.1
+Version: 0.8.1
 Description: Theme made for "Złota Ósemka" - scout group from Sławków, Poland
 Tags: responsive, topbar
 Author: Wojciech Woźniak
@@ -58,6 +58,7 @@ body {
   background-size: cover !important;
   position: absolute;
   height: 90vh;
+	min-height: 450px;
   z-index: -10;
   bottom: 0;
   top: 0;
@@ -143,10 +144,11 @@ li a {
 
 #homelink {
   height: fit-content;
-  width: 40px;
+  width: 70px;
   margin-left: 1.2%;
   margin-top: auto;
   margin-bottom: auto;
+	margin-right: 1.2%;
 }
 
 /* navigation */
@@ -162,7 +164,7 @@ nav {
   position: fixed;
   left: 0;
   text-transform: uppercase;
-  z-index: 2;
+  z-index: 999 !important;
   transition-duration: 0.4s;
 }
 
@@ -331,7 +333,7 @@ nav {
     flex-direction: column;
     height: fit-content !important;
     padding: 0px;
-    left: -44px;
+    left: -74px;
     top: var(--navbarheight);
     position: fixed;
     width: 110vw !important;
@@ -382,14 +384,46 @@ nav {
 #title {
   position: absolute;
   color: var(--action);
-  font-size: 4rem;
-  font-weight: 700;
   top: 45vh;
+	font-weight: 700;
+	font-size: 3rem;
+	display: inline-block;
   text-align: center;
   text-transform: uppercase;
 }
 
+.title-part {
+	  font-weight: 700;
+	font-size: 4rem;
+}
+
+@media screen and (max-height: 700px) {
+	#title {
+		top: 35vh;
+		font-size: 2.5rem !important;
+	}
+}
+
+@media screen and (max-height: 500px) {
+	#title {
+		font-size: 1.8rem !important;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.title-part {
+		font-size: 3rem;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.title-part {
+		font-size: 2rem;
+	}
+}
+
 #root {
+	overflow-y: hidden;
   margin-top: 80vh;
   display: flex;
   flex-direction: row;
@@ -408,11 +442,20 @@ nav {
   width: 100%;
   padding: 40px;
   box-shadow: var(--main-shadow);
-  min-height: 400px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: left;
+}
+
+.sidebar-element p {
+		text-align: center;
+	}
+
+@media screen and (max-width: 870px) {
+	.sidebar-element h2, .wrapper h2 {
+		text-align: center;
+	}
 }
 
 .sidebar-logo {
@@ -463,6 +506,25 @@ nav {
 
 /* archive template */
 
+.pagination {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.page-numbers {
+	color: var(--gold);
+}
+
+.page-numbers:hover {
+	color: var(--darkgold);
+}
+
+.nav-links [aria-current]:not([aria-current="false"]) {
+	color: var(--black) !important;
+}
+
 .post-preview {
   margin-top: 35px;
 }
@@ -472,6 +534,13 @@ nav {
   flex-direction: row;
   gap: 20px;
   align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+	.post-elements {
+		flex-direction: column;
+		text-align: center;
+	}
 }
 
 .preview-title {
@@ -561,6 +630,24 @@ nav {
   align-items: flex-start;
 }
 
+@media screen and (max-width: 870px) {
+	#footer-menu {
+		justify-content: space-around;
+	}
+	#footer-menu li {
+		align-items: center;
+	}
+	#footer-menu .sub-menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+	#footer-menu .sub-menu li a {
+		text-align: center !important;
+	}
+}
+
 #footer-menu li a {
   width: fit-content !important;
   transition: .4s all;
@@ -625,20 +712,40 @@ nav {
 #footer-end {
   background-color: var(--footerdarker);
   width: 100%;
-  height: 40px;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	margin-bottom: 2px;
 }
 
 .footer-end-text {
   color: white;
   margin: 0px;
   font-size: .8rem;
+	text-align: center;
 }
 
 .footer-end-link:hover {
   color: var(--action);
+}
+
+@media screen and (max-width: 600px) {
+  .footer-separator {
+    display: none;
+    position: absolute;
+  }
+  
+  #footer-end {
+    flex-direction: column;
+    gap: 6px;
+	  
+  }
+	.footer-end-text {
+		font-size: 15px !important;
+	}
 }
 
 /* Sites */
@@ -788,7 +895,7 @@ nav {
 
 .c-person-pic {
   width: 150px;
-  height: auto;
+  height: 150px;
   margin-bottom: 10px;
 }
 
