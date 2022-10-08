@@ -12,9 +12,13 @@
             <aside class="sidebar">
                 <article class="sidebar-element">
                     <h2>KALENDARZ</h2>
+					<p>Brak nadchodzących wydarzeń</p>
                 </article>
-                <article class="sidebar-element logos">
+                <article class="sidebar-element sidebar-socials">
                     <h2>SOCIAL MEDIA</h2>
+					<a href="https://www.youtube.com/c/ZlotaOsemka" target="_blank" class="s-link"><i class="fa-brands fa-youtube"></i><p>&nbsp;Kanał YouTube Związku Drużyn</p></a>
+					<a href="" target="_blank" class="s-link fb-link"><i class="fa-brands fa-facebook-f dont-show"></i>&nbsp;<p class="fb-link-text"></p></a>
+					<a href="" target="_blank" class="s-link ig-link"><i class="fa-brands fa-instagram dont-show"></i>&nbsp;<p class="ig-link-text"></p></a>
                 </article>
             </aside>
             <article id="articles">
@@ -34,7 +38,14 @@
                             endwhile;
                         endif;
                     ?>
-                    <?php the_posts_pagination(); ?>
+                    <?php the_posts_pagination(array(
+				'mid_size'           => 1,
+				'prev_text'          => _x( 'Poprzednia strona', 'Poprzednia strona z postami' ),
+				'next_text'          => _x( 'Następna strona', 'Następna strona z postami' ),
+				'screen_reader_text' => __( 'Wybór strony' ),
+				'aria_label'         => __( 'Posts' ),
+				'class'              => 'pagination',
+			)); ?>
             </article>
         </div>
     </div>

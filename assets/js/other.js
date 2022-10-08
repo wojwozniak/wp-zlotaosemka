@@ -1,3 +1,80 @@
+const badUri = window.location.pathname;
+let uri = badUri.substring(1, badUri.length-1);
+
+const socials = [
+	{
+        '8dgz': {
+            'Facebook': 'https://www.facebook.com/zloteiskierki'
+        }
+	},
+	{
+        '18dgz': {
+            'Facebook': 'https://www.facebook.com/zloteduszki/'
+        }
+	},
+	{
+        '3ddh': {
+        }
+	},
+	{
+        '8ddh': {
+            'Facebook': 'https://www.facebook.com/profile.php?id=100080487730459',
+			'Instagram': 'https://www.instagram.com/8_ddh/'
+        }
+	},
+	{
+        '10ddh': {
+            'Facebook': 'https://www.facebook.com/10ddhzwiad',
+			'Instagram': 'https://www.instagram.com/10.ddh/'
+        }
+	},
+	{
+        '80dds': {
+            'Facebook': 'https://www.facebook.com/80dds/',
+			'Instagram': 'https://www.instagram.com/80dds/'
+        }
+	},
+	{
+        '88ddw': {
+            'Facebook': 'https://www.facebook.com/88ddwzloci'
+        }
+	},
+	{
+        'aurum': {
+            'Facebook': 'https://www.facebook.com/profile.php?id=100068660199296'
+        }
+	},
+	{
+        'hkt': {
+            'Facebook': 'https://www.facebook.com/hktzlotyazymut'
+        }
+	},
+	{
+        'zesp-charytatywny': {
+            'Facebook': 'https://www.facebook.com/profile.php?id=100066659972284'
+        }
+	},
+];
+
+
+const socialLinks = document.querySelectorAll('.s-link');
+if(socialLinks) {
+	for(let i=0; i<socials.length; i++) {
+		if(socials[i][uri]) {
+			if(socials[i][uri]['Facebook']) {
+				document.querySelector('.fb-link-text').textContent = 'Facebook';
+				document.querySelector('.fb-link').href = socials[i][uri]['Facebook'];
+				document.querySelector('.fa-facebook-f').classList.remove('dont-show');
+			}
+			if(socials[i][uri]['Instagram']) {
+				document.querySelector('.ig-link-text').textContent = 'Instagram';
+				document.querySelector('.ig-link').href = socials[i][uri]['Instagram'];
+				document.querySelector('.fa-instagram').classList.remove('dont-show');
+			}
+		}
+	}
+}
+
 // Making navbar fixed
 const nav = document.getElementById("navbar");
 nav.classList.add("fixed");
