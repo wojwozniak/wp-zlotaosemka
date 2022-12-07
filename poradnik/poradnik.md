@@ -30,6 +30,7 @@ Aby dodać artykuł, musisz najpierw wejść do panelu dodawania wpisów. Aby to
 ![Link](5.png)
 ### 2.3 Opcje artykułu
 Jedna z najważniejszych rzeczy przy dodawaniu artykułu na stronę. Ustawiamy wszystko w panelu po prawej stronie. Jeśli go nie widzisz, możesz go rozwinąć przyciskiem w prawym górnym rogu strony (białe koło zębate na czarnym tle). Poniżej omówię dwie zakładki w których musimy coś ustawić.
+
 ![Ustawienia](6.png)
 #### Zakładka kategorie
 Tutaj wybierasz na której podstronie pojawi się Twój artykuł. Zwykle będziesz chciał zaznaczyć swoją drużynę, np. _8ddh_. Możesz wybrać kilka kategorii (jeśli np. robiłeś wspólną zbiórkę z inną drużyną ze Związku i ustaliliście że chcecie mieć jeden artykuł). Jeśli zapomnisz to zaznaczyć, Twój artykuł będzie niewidoczny!
