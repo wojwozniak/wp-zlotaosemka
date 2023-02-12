@@ -1,0 +1,69 @@
+.mc-main span .event-count {
+	display: none !important;
+}
+
+.mc-main .mc-list .mc-events {
+	display: flex;
+	flex-direction: column;
+}
+
+.mc-main .mc_general .event-title {
+	background: var(--action) !important;
+}
+
+.mc-main .mc_general .event-title a {
+	background: var(--action) !important;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.mc-main .mc_general .event-title a span {
+	text-align: center;
+	justify-content: center;
+}
+
+.mc-main .mc_general .event-title a:hover, .mc-main .mc_general .event-title a:focus {
+	background: var(--actiondarker) !important;
+}
+
+.mc-main .time-block {
+	display: none !important;
+}
+
+.mc-main .details .sharing {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.mc-main a {
+	color: var(--action);
+}
+
+.mc-main a:hover, .mc-main a:active {
+	color: var(--actiondarker);
+}
+
+.mc-main.list .my-calendar-month, .mc-main .heading {
+	display: none;
+}
+
+.view-full {
+	display: none;
+}
+
+.category-icon {
+	display: none;
+}
+
+.single-event .time-block {
+	background: transparent;
+	border: 0px;
+}
+
+.time-block {
+	display: none;
+}

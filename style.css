@@ -3,7 +3,7 @@
 /*
 Theme Name: Złota Ósemka
 Text Domain: Złota Ósemka
-Version: 0.8.1
+Version: 1.0.0
 Description: Theme made for "Złota Ósemka" - scout group from Sławków, Poland
 Tags: responsive, topbar
 Author: Wojciech Woźniak
@@ -29,6 +29,22 @@ Author URI: https://github.com/wojwozniak
     --main-shadow: 0px 30px 50px rgba(0, 0, 0, 0.15), 0 0 100px 0 rgba(25, 25, 25, 0.1);
     --navbarheight: 94px;
 
+}
+
+.dont-show {
+	display: none !important;
+}
+
+.fa-brands {
+	width: 20px;
+}
+
+.fa-brands::before {
+	position: relative;
+}
+
+.fa-facebook-f::before {
+	left: 4px;
 }
 
 html,body {
@@ -65,6 +81,19 @@ body {
   left: 0;
   right: 0;
   filter: brightness(0.8);
+}
+
+.needed-btn {
+	background-color: gold;
+	border: 1px solid black;
+	color: black;
+	border-radius: 5px;
+	margin: 20px;
+}
+
+.needed-btn a {
+	color: black;
+	text-decoration: none;
 }
 
 a.button {
@@ -116,6 +145,11 @@ h2 {
 
 .btn:focus {
   box-shadow: none;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
 }
 
 li {
@@ -436,6 +470,29 @@ nav {
   width: 30%;
 }
 
+.lower .sidebar {
+	width: 35%;
+}
+
+.s-link {
+	color: var(--accent);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5px !important;
+	width: fit-content !important;
+}
+
+.s-link:hover {
+	color: var(--action);
+}
+
+.s-link p {
+	margin: 0px !important;
+}
+
+
 .sidebar-element {
   background-color: var(--main);
   border-radius: 15px;
@@ -445,16 +502,21 @@ nav {
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
 }
 
 .sidebar-element p {
 		text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	}
 
 @media screen and (max-width: 870px) {
 	.sidebar-element h2, .wrapper h2 {
 		text-align: center;
+	}
+	.logos {
+		display: none;
 	}
 }
 
@@ -462,6 +524,7 @@ nav {
   width: 250px;
   height: auto;
   margin: auto;
+	margin-bottom: 10px !important;
 }
 
 #logo-hufiec {
@@ -769,7 +832,7 @@ nav {
 
 #articles {
   padding: 40px;
-  width: 70%;
+  width: 65%;
   min-height: 400px;
   background-color: var(--main);
   border-radius: 15px;
@@ -783,6 +846,7 @@ nav {
   
   #articles {
     width: 100%;
+	  text-align: center;
   }
 }
 
@@ -835,6 +899,10 @@ nav {
   text-transform: uppercase;
 }
 
+.galbtn {
+	width: 55px !important;
+}
+
 .btnstyle:hover:not(.currentbtn) {
   text-decoration: underline;
   color: var(--action);
@@ -871,14 +939,20 @@ nav {
 .desc {
   width: 100%;
   height: 100%;
-  display: none;
+  display: none !important;
+	margin-top: 20px;
 }
 
 .displaydesc {
-  display: flex;
-  flex-direction: row;
+  display: flex !important;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+	align-items: center;
+}
+
+#d-kadra, #d-dokumenty {
+	flex-direction: row;
 }
 
 /* Single person */
@@ -887,10 +961,23 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3%;
+  margin: 5px;
   text-align: center;
-  width: fit-content;
-  height: auto;
+  height: 300px;
+  width: 21%;
+	min-width: fit-content;
+	box-sizing: border-box;
+}
+
+.c-szef {
+	width: 100% !important;
+	max-width: 100% !important;
+	 display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+	align-items: start;
+	margin-top: 15px;
 }
 
 .c-person-pic {
@@ -900,12 +987,31 @@ nav {
 }
 
 .c-pic {
-  max-width:100%;
-  max-height:100%;
+  width: 100%;
+  height: 100%;
+	object-fit: cover;
+}
+
+.c-person p {
+	margin: 0px !important;
+	padding: 0px !important;
+	border: 0px !important;
+	display: flex !important;
+	text-align: center !important;
+	justify-content: center !important;
 }
 
 .c-person-data p {
-  margin-bottom: 5px;
+  margin: 0px !important;
+	font-weight: bold;
+	white-space: nowrap;
+	width: fit-content;
+}
+
+.c-person-contactdata p {
+	margin: 0px !important;
+	white-space: nowrap;
+	width: fit-content;
 }
 
 
@@ -923,11 +1029,27 @@ nav {
   width: 100%;
 }
 
+#site-root .article {
+	margin-top: 0px !important;
+}
+
 .post-thumbnail {
   float: right;
-  width: 45%;
+  max-width: 45%;
+	width: auto;
   height: auto;
   max-height:40vh;
+	margin: 20px;
+	margin-right: 0px !important;
+}
+
+@media screen and (max-width:870px) {
+	#post-top {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	}
 }
 
 #single-post-wrapper {
@@ -939,6 +1061,31 @@ nav {
   box-shadow: var(--main-shadow);
 }
 
+@media screen and (max-width: 870px) {
+	#single-post-wrapper {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	
+	.post-thumbnail {
+  width: 100% !important;
+		margin: 10px !important;
+}
+}
+
+#single-post-wrapper a {
+	color: var(--action);
+}
+
+#single-post-wrapper a:hover {
+	color: var(--actiondarker);
+}
+
+#single-post-wrapper .date {
+	color: var(--actiondarker);
+}
+
 /* default page */
 
 #page-wrapper {
@@ -948,6 +1095,33 @@ nav {
   border-radius: 15px;
   padding: 40px;
   box-shadow: var(--main-shadow);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#page-wrapper p, .desc p {
+	margin-bottom: 0px;
+	max-width: 880px;
+	width: 90% !important;
+	padding: 0px !important;
+}
+
+.desc ul, .desc li {
+	margin-bottom: 2px;
+	max-width: 880px;
+	width: 90% !important;
+	padding: 0px !important;
+}
+
+.article {
+	margin-top: calc(var(--navbarheight) + 30px);
+}
+
+.sidebar-socials {
+	text-align: left;
+	justify-content: left;
 }
 
 /* galeria template */
@@ -1012,6 +1186,7 @@ nav {
   margin-top: 100px;
   z-index: 10;
   transition: all 1s;
+margin-left: 5%;
 }
 
 .k-past:hover p {
@@ -1048,6 +1223,7 @@ nav {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+	align-items: start;
 }
 
 .sponsor {
@@ -1063,16 +1239,99 @@ nav {
   filter: grayscale(1);
 }
 
+.partner {
+  filter: grayscale(0) !important;
+}
+
+.partner:hover {
+	border: 2px solid var(--action);
+}
+
+.sponsor a {
+	height: 200px;
+	width: 200px;
+}
+
 .sponsor:hover {
   filter: grayscale(0);
 }
 
-.sponsor-logo {
+.sponsor-thumb {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 200px;
+	z-index: 10;
   top: 0;
   left: 0;
   opacity: 1;
   border-radius: 20px;
+	display: block !important;
+}
+
+.partner-thumb {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+	z-index: 10;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  border-radius: 20px;
+	display: block !important;
+}
+
+.media-wrapper {
+  cursor: pointer;
+  width: 250px;
+  height: 145px;
+	border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.15), 0 0 100px 0 rgba(25, 25, 25, 0.1);
+  padding: 20px;
+  margin: 20px;
+}
+
+.media-wrapper-text {
+  height: fit-content !important;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.media-wrapper-text i {
+  font-size: 65px;
+}
+
+.media-wrapper-text .text {
+	margin-bottom: 0px;
+}
+
+.media-wrapper-text a {
+  color: var(--accent);
+  font-size: 20px;
+  display: flex;
+  line-height: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-wrapper:hover .media-wrapper-text a {
+  text-decoration: none;
+  color: var(--action);
+}
+
+.media-wrapper:hover {
+  background-color: var(--maindarker);
+}
+
+.sponsor-container .fa-solid {
+  height: fit-content !important;
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+  font-size: 60px;
 }
