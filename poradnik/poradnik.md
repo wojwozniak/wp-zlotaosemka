@@ -1,9 +1,9 @@
 # Strona Złotej Ósemki - Poradnik dla Drużynowego
 ## 0. Wstęp
-Masz przed sobą poradnik administrowania nową stroną Złotej Ósemki. Zmieniło się naprawdę dużo - razem z nową szatą graficzną weszły "pod spodem". Nie ma się jednak czego obawiać - nowy wordpress jest intuicyjny, a w razie problemu poradnik przeprowadzi Cię przez wszystkie najtrudniejsze momenty.
+Masz przed sobą poradnik administrowania nową stroną Złotej Ósemki. Zmieniło się naprawdę dużo - razem z nową szatą graficzną weszły "pod spodem". Nie ma się jednak czego obawiać - nowy wordpress jest intuicyjny (a w razie problemu poradnik przeprowadzi Cię przez wszystkie najtrudniejsze momenty).
 ## 1. Logowanie
 Jeśli to czytasz, prawdopodobnie jest już utworzone dla Ciebie konto.
-Panel logowania dostępny jest pod adresem https://www.zlotaosemka.zhp.net.pl/wp-admin. Logujesz się swoim mailem ZHP i hasłem (które dostaniesz je na maila). Po zalogowaniu Twoim oczom ukaże się panel główny wordpressa
+Panel logowania dostępny jest pod adresem https://www.zlotaosemka.zhp.net.pl/wp-admin. Logujesz się swoim mailem ZHP i hasłem (które dostaniesz na maila). Po zalogowaniu Twoim oczom ukaże się panel główny wordpressa
 ![Panel główny](1.png)
 
 ### 1.1. Po pierwszym logowaniu
