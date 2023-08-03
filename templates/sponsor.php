@@ -4,7 +4,7 @@
 ?>
 
 <img id="site-bg" style="background-image: url("<?php the_post_thumbnail('large',['class' => 'site-bg', 'title' => 'Tło']); ?>")></img>
-<h1 id="title"><?php wp_title('') ?></h1>
+<div id="title"><h1 class="title-part"><?php wp_title('') ?></h1></div>
 <div id="site-root">
     <div class="single-wrapper">
         <article class="article">

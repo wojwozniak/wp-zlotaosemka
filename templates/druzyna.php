@@ -2,8 +2,8 @@
 	/* Template Name: Drużyna/Gromada/Jednostka */
 	get_header();
 ?>
-<img id="site-bg" style="background-image: url("<?php the_post_thumbnail('thumbnail',['class' => 'site-bg', 'title' => 'Tło']); ?>"></img>
-<h1 id="title"><?php wp_title('') ?></h1>
+<img id="site-bg" style="background-image: url("<?php the_post_thumbnail('large',['class' => 'site-bg', 'title' => 'Tło']); ?>"></img>
+<div id="title"><h1 class="title-part"><?php wp_title('') ?></h1></div>
 <div id="site-root">
 	<article class="site">
 		<?php echo the_content(); ?>
@@ -12,7 +12,7 @@
             <aside class="sidebar">
                 <article class="sidebar-element">
                     <h2>KALENDARZ</h2>
-					<p>Brak nadchodzących wydarzeń</p>
+					<?php echo do_shortcode('[my_calendar category="1" months="12" weekends="true" format="list"]'); ?>
                 </article>
                 <article class="sidebar-element sidebar-socials">
                     <h2>SOCIAL MEDIA</h2>
