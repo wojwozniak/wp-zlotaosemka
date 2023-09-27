@@ -11,9 +11,7 @@
 	<aside class="sidebar">
 		<article class="sidebar-element">
 			<h2>KALENDARZ</h2>
-			<p>
-				<?php echo do_shortcode('[my_calendar format="list"]'); ?>
-			</p>
+			<?php echo do_shortcode('[my_calendar category="1" months="12" weekends="true" format="list"]'); ?>
 		</article>
 		<article class="sidebar-element logos">
 			<a href="https://zhp.pl/" target="_blank" style="width: 250px"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/i1.jpg' ); ?>" alt="" class="sidebar-logo"></a>
@@ -30,6 +28,7 @@
                             'post_status' => 'publish',
                             'category_name' => 'main',
                             'posts_per_page' => 10,
+							'paged'          => get_query_var( 'paged' ),
                         );
                         $arr_posts = new WP_Query( $args );
                         if ( $arr_posts->have_posts() ) :
@@ -41,8 +40,8 @@
                     ?>
 			<?php the_posts_pagination(array(
 				'mid_size'           => 1,
-				'prev_text'          => _x( 'Poprzednia strona', 'Poprzednia strona z postami' ),
-				'next_text'          => _x( 'Następna strona', 'Następna strona z postami' ),
+				'prev_text'          => _x( 'Poprzednia strona', 'previous set of posts' ),
+				'next_text'          => _x( 'Następna strona', 'next set of posts' ),
 				'screen_reader_text' => __( 'Wybór strony' ),
 				'aria_label'         => __( 'Posts' ),
 				'class'              => 'pagination',
