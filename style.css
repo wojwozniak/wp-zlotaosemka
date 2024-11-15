@@ -500,7 +500,7 @@ nav {
     background-color: var(--main);
     border-radius: 15px;
     width: 100%;
-    padding: 40px;
+    padding: 32px;
     box-shadow: var(--main-shadow);
     margin-bottom: 30px;
     display: flex;
@@ -863,7 +863,7 @@ nav {
 }
 
 #articles {
-    padding: 40px;
+    padding: 32px;
     width: 65%;
     min-height: 400px;
     background-color: var(--main);
