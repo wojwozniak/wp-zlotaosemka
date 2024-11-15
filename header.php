@@ -22,9 +22,18 @@
 				$logo = wp_get_attachment_image_src($custom_logo_id);
 			}
 		?>
-		<a id="homelink" href="<?php echo get_home_url(); ?>">
-			<img id="logo" src=<?php echo $logo[0] ?> alt="logo"/>
-		</a>	
+		<?php if (!is_front_page()) : ?>
+			<a id="homelink" class="homelink-othersite" href="<?php echo get_home_url(); ?>">
+				<img id="logo" src="<?php echo esc_url($logo[0]); ?>" alt="logo" />
+			<p class="homelink-text">
+				Związek Drużyn &nbsp; "Złota Ósemka"
+			</p>
+			</a>
+		<?php else : ?>
+			<a id="homelink" href="<?php echo get_home_url(); ?>">
+				<img id="logo" src="<?php echo esc_url($logo[0]); ?>" alt="logo" />
+			</a>
+		<?php endif; ?>
 		<div id="main-nav">
 			<?php
 				wp_nav_menu(

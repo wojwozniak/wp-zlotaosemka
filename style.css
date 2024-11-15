@@ -187,6 +187,30 @@ li a {
     margin-right: 1.2%;
 }
 
+#homelink:hover {
+    text-decoration: none !important;
+}
+
+.homelink-text:hover {
+    text-decoration: none !important;
+}
+
+.homelink-othersite {
+    display: flex;
+    flex-direction: row;
+    width: 290px !important;
+}
+
+.homelink-text {
+    padding: 0;
+    margin: 0;
+    width: 160px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--action);
+}
+
 /* navigation */
 
 nav {
@@ -506,6 +530,10 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.sidebar-element h2 {
+    width: 100%;
 }
 
 .sidebar-element p {
