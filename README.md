@@ -1,13 +1,5 @@
 # wp-zlotaosemka
 
-## Wstęp
+## Motyw dla strony Związku Drużyn "Złota Ósemka"
 
-- Nowa strona internetowa dla Złotej Ósemki. Lżejsza, szybsza, jaśniejsza i mniej zabugowana ^^.
-
-## Jak działa? / Instalacja
-
-- Strona stworzona jako motyw Wordpressa. Instalacja jest bardzo prosta - wystarczy zainstalować motyw i następnie w menu wordpressa wygenerować menu, dodać logo i nazwę strony.
-
-## Technologie
-
-- Wordpress, PHP, Javasript, CSS, HTML
+Oryginalna wersja z 06/07-2022, duże zmiany 11-2024
