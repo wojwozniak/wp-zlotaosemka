@@ -1161,7 +1161,7 @@ nav {
     min-height: 400px;
     width: 90%;
     border-radius: 15px;
-    padding: 40px;
+    padding: 48px;
     box-shadow: var(--main-shadow);
     display: flex;
     flex-direction: column;
