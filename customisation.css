@@ -1,53 +1,68 @@
+.mc-content {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.mc-main {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.mc-main .mc-list {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+
+.mc-main .mc-list .mc-events {
+	padding: 0 !important;
+	border: 0 !important;
+	background-color: transparent !important;
+	outline: transparent !important;
+	max-width: 600px !important;
+}
+
 .mc-main span .event-count {
 	display: none !important;
 }
 
-.mc-main .mc-list .mc-events {
-	display: flex;
-	flex-direction: column;
-}
-
-.mc-main .mc_general .event-title {
-	background: var(--action) !important;
+.mc-main .event-date {
+	display: none;
 }
 
 .mc-main .mc_general .event-title a {
-	background: var(--action) !important;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+	display: none !important;
 }
 
-.mc-main .mc_general .event-title a span {
-	text-align: center;
-	justify-content: center;
+.mc-main .list-event>.event-title {
+	display: none !important;
 }
 
-.mc-main .mc_general .event-title a:hover, .mc-main .mc_general .event-title a:focus {
-	background: var(--actiondarker) !important;
+.mc-main .mc-list .event-title a.list::before {
+	content: none !important;
+}
+
+.mc-main .mc_general .event-title a:hover,
+.mc-main .mc_general .event-title a:focus {
+	background: transparent !important;
 }
 
 .mc-main .time-block {
 	display: none !important;
 }
 
-.mc-main .details .sharing {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-}
-
 .mc-main a {
 	color: var(--action);
 }
 
-.mc-main a:hover, .mc-main a:active {
+.mc-main a:hover,
+.mc-main a:active {
 	color: var(--actiondarker);
 }
 
-.mc-main.list .my-calendar-month, .mc-main .heading {
+.mc-main.list .my-calendar-month,
+.mc-main .heading {
 	display: none;
 }
 
@@ -66,4 +81,73 @@
 
 .time-block {
 	display: none;
+}
+
+.mc-main .details .mc_edit_links {
+	display: none !important;
+}
+
+
+.mc-main .details {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	margin: 0 !important;
+	margin-top: 7px !important;
+	padding: 0 !important;
+	gap: 9px;
+}
+
+.mc-main .cal-box {
+	display: flex;
+	flex-direction: column !important;
+}
+
+.mc-event-image {
+	width: 100% !important;
+	max-width: 150px !important;
+	max-height: 150px !important;
+}
+
+@media screen and (min-width: 870px) {
+	.mc-event-image {
+		display: none !important;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.mc-event-image {
+		display: block !important;
+	}
+}
+
+.mc-event-title {
+	font-size: 18px !important;
+	font-weight: bold !important;
+}
+
+.mc-event-mine {
+	width: fit-content !important;
+}
+
+.mc-event-mine p {
+	width: fit-content !important;
+	margin: 0px !important;
+	height: fit-content !important;
+}
+
+.mc-event-mine .mc-under {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+}
+
+.mc-event-mine .mc-under .time-separator {
+	margin-left: -5px;
+	margin-right: -5px;
+}
+
+.mc-excerpt,
+.mc-excerpt p {
+	text-align: left;
 }
