@@ -205,6 +205,10 @@ li a {
     padding: 0;
     margin: 0;
     width: 160px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 18px;
     display: flex;
     flex-direction: row;
     align-items: center;
