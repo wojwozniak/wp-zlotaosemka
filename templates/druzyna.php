@@ -17,7 +17,7 @@
 <div id="site-root" class="<?php echo esc_attr($site_root_class); ?>">
     <?php
         if (!empty($custom_title)) {
-            echo '<div id="cus-theme-title-wrapper">';
+            echo '<div id="cus-theme-title-wrapper" class="weird-fix">';
                 echo '<h1 class="cus-theme-title">' . esc_html($custom_title) . '</h1>';
                 if (!empty($custom_subtitle)) {
                     echo '<h2 class="cus-theme-subtitle">' . esc_html($custom_subtitle) . '</h2>';
