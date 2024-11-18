@@ -2,7 +2,6 @@
     /* Template Name: Drużyna/Gromada/Jednostka */
     get_header();
 ?>
-<img id="site-bg" style="background-image: url('<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'large')); ?>');"></img>
 
 <?php
     $post_id = get_the_ID();
@@ -13,6 +12,8 @@
     $site_root_class = !empty($custom_title) ? 'smaller-root' : '';
 ?>
 
+<img id="site-bg" style="background-image: url("<?php the_post_thumbnail('large',['class' => 'site-bg', 'title' => 'Tło']); ?>")></img>
+			
 <div id="site-root" class="<?php echo esc_attr($site_root_class); ?>">
     <?php
         if (!empty($custom_title)) {
