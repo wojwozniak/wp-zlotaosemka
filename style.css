@@ -567,9 +567,9 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 5px !important;
-    width: fit-content !important;
+    width: 50%;
 }
 
 .s-link:hover {
@@ -578,6 +578,8 @@ nav {
 
 .s-link p {
     margin: 0px !important;
+    margin-left: 10px !important;
+    text-align: start !important;
 }
 
 
@@ -941,6 +943,7 @@ nav {
     width: 65%;
     padding-left: 48px;
     padding-right: 48px;
+    padding-bottom: 48px;
     border-radius: 15px;
     box-shadow: var(--main-shadow);
 }
@@ -1254,6 +1257,19 @@ nav {
 .sidebar-socials {
     text-align: left;
     justify-content: left;
+}
+
+.sidebar-socials-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.cus-fa {
+    height: 48px !important;
+    width: auto !important;
+    font-size: 48px !important;
 }
 
 /* galeria template */

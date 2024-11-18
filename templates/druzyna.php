@@ -38,16 +38,18 @@
                 <?php echo do_shortcode('[my_calendar category="1" months="12" weekends="true" format="list"]'); ?>
             </article>
             <article class="sidebar-element sidebar-socials">
-                <h2>SOCIAL MEDIA</h2>
-                <a href="https://www.youtube.com/c/ZlotaOsemka" target="_blank" class="s-link">
-                    <i class="fa-brands fa-youtube"></i><p>&nbsp;Kanał YouTube Związku Drużyn</p>
-                </a>
-                <a href="" target="_blank" class="s-link fb-link">
-                    <i class="fa-brands fa-facebook-f dont-show"></i>&nbsp;<p class="fb-link-text"></p>
-                </a>
-                <a href="" target="_blank" class="s-link ig-link">
-                    <i class="fa-brands fa-instagram dont-show"></i>&nbsp;<p class="ig-link-text"></p>
-                </a>
+                <h2>ŚLEDŹ NASZE DZIAŁANIA</h2>
+				<div class="sidebar-socials-links">
+					<a href="https://www.youtube.com/c/ZlotaOsemka" target="_blank" class="s-link">
+						<i class="fa-brands fa-youtube cus-fa"></i><p>&nbsp;Kanał YouTube Związku Drużyn</p>
+					</a>
+					<a href="" target="_blank" class="s-link fb-link">
+						<i class="fa-brands fa-facebook-f dont-show cus-fa"></i>&nbsp;<p class="fb-link-text"></p>
+					</a>
+					<a href="" target="_blank" class="s-link ig-link">
+						<i class="fa-brands fa-instagram dont-show cus-fa"></i>&nbsp;<p class="ig-link-text"></p>
+					</a>
+				</div>
             </article>
         </aside>
         <article id="articles">

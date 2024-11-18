@@ -15,8 +15,10 @@
 		</article>
 		 <article class="sidebar-element sidebar-socials">
 			 <h2>ŚLEDŹ NASZE DZIAŁANIA</h2>
-			 <a href="https://www.youtube.com/c/ZlotaOsemka" target="_blank" class="s-link"><i class="fa-brands fa-youtube"></i><p>&nbsp;Kanał YouTube Związku Drużyn</p></a>
-			 <a href="https://www.facebook.com/zlotaosemka" target="_blank" class="s-link fb-link"><i class="fa-brands fa-facebook-f dont-show"></i>&nbsp;<p class="fb-link-text"></p></a>
+			 <div class="sidebar-socials-links">
+				 <a href="https://www.youtube.com/c/ZlotaOsemka" target="_blank" class="s-link"><i class="fa-brands fa-youtube cus-fa"></i><p>&nbsp;Kanał YouTube Związku Drużyn</p></a>
+			 	<a href="https://www.facebook.com/zlotaosemka" target="_blank" class="s-link"><i class="fa-brands fa-facebook-f cus-fa"></i><p>Facebook Związku Drużyn</p>&nbsp;</a>
+			 </div>
          </article>
 		<article class="sidebar-element logos">
 			<a href="https://zhp.pl/" target="_blank" style="width: 250px"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/i1.jpg' ); ?>" alt="" class="sidebar-logo"></a>
