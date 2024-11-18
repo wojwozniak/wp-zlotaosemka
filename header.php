@@ -34,7 +34,7 @@
 				<img id="logo" src="<?php echo esc_url($logo[0]); ?>" alt="logo" />
 			</a>
 		<?php endif; ?>
-		<div id="main-nav">
+		<div id="main-nav" class="<?php echo is_front_page() ? '' : 'overcompensate'; ?>">
 			<?php
 				wp_nav_menu(
 					array(
