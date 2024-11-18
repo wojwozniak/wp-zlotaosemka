@@ -579,7 +579,8 @@ nav {
 .s-link p {
     margin: 0px !important;
     margin-left: 10px !important;
-    text-align: start !important;
+    text-align: left !important;
+    max-width: 130px;
 }
 
 
