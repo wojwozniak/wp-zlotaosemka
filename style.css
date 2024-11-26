@@ -1478,7 +1478,7 @@ nav {
 }
 
 .media-wrapper-text i {
-    font-size: 65px;
+    font-size: 60px;
 }
 
 .media-wrapper-text .text {
@@ -1487,7 +1487,7 @@ nav {
 
 .media-wrapper-text a {
     color: var(--accent);
-    font-size: 18px;
+    font-size: 16px;
     display: flex;
     line-height: 20px;
     flex-direction: row;
