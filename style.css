@@ -3,7 +3,7 @@
 /*
 Theme Name: Złota Ósemka
 Text Domain: Złota Ósemka
-Version: 1.3.5
+Version: 1.4.0
 Description: Theme made for "Złota Ósemka" - scout group from Sławków, Poland
 Tags: responsive, topbar
 Author: Wojciech Woźniak
@@ -1089,20 +1089,20 @@ nav {
 }
 
 .displaydesc {
-    display: flex !important;
+    display: block !important;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-#d-kadra,
-#d-dokumenty {
+#d-kadra.displaydesc,
+#d-dokumenty.displaydesc {
+    display: flex !important;
     flex-direction: row;
 }
 
 /* Single person */
-
 .c-person {
     display: flex;
     flex-direction: column;
